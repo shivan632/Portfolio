@@ -851,111 +851,220 @@
             gap: 10px;
         }
 
-        /* Testimonials Section */
-        #testimonials {
+        /* Certificates Section */
+        #certificates {
             background-color: transparent;
+            overflow: hidden;
         }
 
-        .testimonials-container {
+        .certificates-container {
             position: relative;
-            max-width: 800px;
-            margin: 0 auto;
+            width: 100%;
+            overflow: hidden;
+            padding: 20px 0;
         }
 
-        .testimonial-slide {
+        .certificates-track {
+            display: flex;
+            gap: 30px;
+            animation: scrollCertificates 30s linear infinite;
+        }
+
+        .certificate-card {
+            flex: 0 0 auto;
+            width: 300px;
             background: var(--card-bg);
-            padding: 30px;
             border-radius: 15px;
+            padding: 25px;
             box-shadow: var(--shadow);
-            margin: 0 20px;
-            text-align: center;
             transition: var(--transition);
             border: 1px solid var(--border-color);
-        }
-
-        .testimonial-content {
-            margin-bottom: 20px;
-            font-style: italic;
             position: relative;
-        }
-
-        .testimonial-content::before,
-        .testimonial-content::after {
-            content: '"';
-            font-size: 3rem;
-            color: var(--accent-color);
-            opacity: 0.3;
-            position: absolute;
-        }
-
-        .testimonial-content::before {
-            top: -20px;
-            left: -10px;
-        }
-
-        .testimonial-content::after {
-            bottom: -40px;
-            right: -10px;
-        }
-
-        .testimonial-author {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .author-image {
-            width: 70px;
-            height: 70px;
-            border-radius: 50%;
             overflow: hidden;
-            margin-bottom: 10px;
-            border: 3px solid var(--accent-color);
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
         }
 
-        .author-image img {
+        .certificate-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--accent-color), var(--accent-secondary));
+            transition: var(--transition);
+        }
+
+        .certificate-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .certificate-card:hover::before {
+            height: 100%;
+            opacity: 0.05;
+        }
+
+        .certificate-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            background: linear-gradient(135deg, var(--accent-color), var(--accent-secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .certificate-title {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: var(--text-primary);
+        }
+
+        .certificate-issuer {
+            font-size: 1rem;
+            margin-bottom: 10px;
+            color: var(--accent-color);
+        }
+
+        .certificate-date {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 15px;
+        }
+
+        .certificate-description {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        @keyframes scrollCertificates {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(calc(-330px * 6));
+            }
+        }
+
+        /* Pause animation on hover */
+        .certificates-track:hover {
+            animation-play-state: paused;
+        }
+
+        /* Certificate Modal */
+        .certificate-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
             width: 100%;
             height: 100%;
-            object-fit: cover;
-            transition: var(--transition);
-        }
-
-        .author-image:hover img {
-            transform: scale(1.1);
-        }
-
-        .author-name {
-            font-weight: 600;
-            margin-bottom: 5px;
-        }
-
-        .author-position {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-        }
-
-        /* Slider Navigation */
-        .slider-nav {
-            display: flex;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 2000;
+            align-items: center;
             justify-content: center;
-            gap: 10px;
-            margin-top: 30px;
+            padding: 20px;
         }
 
-        .slider-dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: var(--bg-secondary);
+        .certificate-modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background: var(--card-bg);
+            border-radius: 15px;
+            max-width: 800px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border-color);
+            position: relative;
+            animation: modalFadeIn 0.3s ease-out;
+        }
+
+        @keyframes modalFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 30px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .modal-header h3 {
+            margin: 0;
+            color: var(--text-primary);
+        }
+
+        .close-modal {
+            background: none;
+            border: none;
+            color: var(--text-secondary);
+            font-size: 1.5rem;
             cursor: pointer;
             transition: var(--transition);
-            border: 1px solid var(--accent-color);
         }
 
-        .slider-dot.active {
-            background: linear-gradient(135deg, var(--accent-color), var(--accent-secondary));
-            transform: scale(1.3);
+        .close-modal:hover {
+            color: var(--accent-color);
+            transform: rotate(90deg);
+        }
+
+        .modal-body {
+            padding: 30px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .certificate-image {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+
+        .certificate-details {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .detail-item {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .detail-label {
+            font-weight: 600;
+            color: var(--accent-color);
+        }
+
+        .detail-value {
+            color: var(--text-primary);
+        }
+
+        .certificate-actions {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .modal-body {
+                grid-template-columns: 1fr;
+            }
         }
 
         /* Contact Section */
@@ -1256,6 +1365,19 @@
                 width: 80%;
                 max-width: 300px;
             }
+
+            .certificate-card {
+                width: 250px;
+            }
+
+            @keyframes scrollCertificates {
+                0% {
+                    transform: translateX(0);
+                }
+                100% {
+                    transform: translateX(calc(-280px * 6));
+                }
+            }
         }
 
         @media (max-width: 576px) {
@@ -1282,6 +1404,19 @@
             .project-card {
                 max-width: 100%;
             }
+
+            .certificate-card {
+                width: 220px;
+            }
+
+            @keyframes scrollCertificates {
+                0% {
+                    transform: translateX(0);
+                }
+                100% {
+                    transform: translateX(calc(-250px * 6));
+                }
+            }
         }
 
     </style>
@@ -1302,7 +1437,7 @@
                     <a href="#about" class="animate delay-1">About</a>
                     <a href="#resume" class="animate delay-2">Resume</a>
                     <a href="#projects" class="animate delay-2">Projects</a>
-                    <a href="#testimonials" class="animate delay-3">Testimonials</a>
+                    <a href="#certificates" class="animate delay-3">Certificates</a>
                     <a href="#contact" class="animate delay-3">Contact</a>
                     
                     <div class="theme-toggle">
@@ -1552,73 +1687,194 @@
         </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section id="testimonials">
+    <!-- Certificates Section -->
+    <section id="certificates">
         <div class="container">
-            <h2 class="animate">Testimonials</h2>
+            <h2 class="animate">My Certificates</h2>
 
-            <div class="testimonials-container">
-                <!-- Testimonial 1 -->
-                <div class="testimonial-slide animate delay-1" style="display: block;">
-                    <div class="testimonial-content">
-                        <p>"Alex transformed our web presence with his technical expertise and attention to detail.
-                            The application he built for us has significantly improved our operational efficiency
-                            and customer satisfaction."</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-image">
-                            <img src="shivan.jpg" alt="Sarah Johnson">
+            <div class="certificates-container">
+                <div class="certificates-track">
+                    <!-- Certificate 1 -->
+                    <div class="certificate-card animate" data-certificate="1">
+                        <div class="certificate-icon icon-3d">
+                            <i class="fas fa-code"></i>
                         </div>
-                        <div>
-                            <h4 class="author-name">Tushar Singh</h4>
-                            <p class="author-position">Student</p>
-                        </div>
+                        <h3 class="certificate-title">Web Development Fundamentals</h3>
+                        <p class="certificate-issuer">Coursera</p>
+                        <p class="certificate-date">Issued: June 2023</p>
+                        <p class="certificate-description">Completed comprehensive course covering HTML, CSS, and JavaScript fundamentals.</p>
                     </div>
-                </div>
 
-                <!-- Testimonial 2 -->
-                <div class="testimonial-slide animate delay-1" style="display: none;">
-                    <div class="testimonial-content">
-                        <p>"Working with Alex was a pleasure. He delivered our project ahead of schedule and was
-                            always available to answer questions and make adjustments. His code is clean and
-                            well-documented."</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-image">
-                            <img src="shivan.jpg" alt="Michael Chen">
+                    <!-- Certificate 2 -->
+                    <div class="certificate-card animate delay-1" data-certificate="2">
+                        <div class="certificate-icon icon-3d">
+                            <i class="fab fa-python"></i>
                         </div>
-                        <div>
-                            <h4 class="author-name">Shivam kr Mishra</h4>
-                            <p class="author-position">Employe, Full Stack Developer</p>
-                        </div>
+                        <h3 class="certificate-title">Python for Data Science</h3>
+                        <p class="certificate-issuer">IBM</p>
+                        <p class="certificate-date">Issued: August 2023</p>
+                        <p class="certificate-description">Mastered Python programming for data analysis and visualization.</p>
                     </div>
-                </div>
 
-                <!-- Testimonial 3 -->
-                <div class="testimonial-slide animate delay-1" style="display: none;">
-                    <div class="testimonial-content">
-                        <p>"Alex's ability to understand complex requirements and translate them into elegant
-                            solutions is remarkable. He's become our go-to developer for all our web projects."</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-image">
-                            <img src="shivan.jpg" alt="Emily Rodriguez">
+                    <!-- Certificate 3 -->
+                    <div class="certificate-card animate delay-2" data-certificate="3">
+                        <div class="certificate-icon icon-3d">
+                            <i class="fas fa-database"></i>
                         </div>
-                        <div>
-                            <h4 class="author-name">Rohit Singh</h4>
-                            <p class="author-position">Hr, Digital Creations</p>
-                        </div>
+                        <h3 class="certificate-title">Database Management</h3>
+                        <p class="certificate-issuer">Oracle</p>
+                        <p class="certificate-date">Issued: October 2023</p>
+                        <p class="certificate-description">Learned SQL fundamentals and database design principles.</p>
                     </div>
-                </div>
 
-                <div class="slider-nav animate delay-2">
-                    <div class="slider-dot active" data-slide="0"></div>
-                    <div class="slider-dot" data-slide="1"></div>
-                    <div class="slider-dot" data-slide="2"></div>
+                    <!-- Certificate 4 -->
+                    <div class="certificate-card animate" data-certificate="4">
+                        <div class="certificate-icon icon-3d">
+                            <i class="fab fa-js"></i>
+                        </div>
+                        <h3 class="certificate-title">JavaScript Algorithms</h3>
+                        <p class="certificate-issuer">freeCodeCamp</p>
+                        <p class="certificate-date">Issued: December 2023</p>
+                        <p class="certificate-description">Completed 300+ hours of JavaScript algorithm challenges.</p>
+                    </div>
+
+                    <!-- Certificate 5 -->
+                    <div class="certificate-card animate delay-1" data-certificate="5">
+                        <div class="certificate-icon icon-3d">
+                            <i class="fab fa-react"></i>
+                        </div>
+                        <h3 class="certificate-title">React Development</h3>
+                        <p class="certificate-issuer">Meta</p>
+                        <p class="certificate-date">Issued: February 2024</p>
+                        <p class="certificate-description">Built interactive UIs with React and modern frontend tools.</p>
+                    </div>
+
+                    <!-- Certificate 6 -->
+                    <div class="certificate-card animate delay-2" data-certificate="6">
+                        <div class="certificate-icon icon-3d">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <h3 class="certificate-title">Cloud Computing Basics</h3>
+                        <p class="certificate-issuer">AWS</p>
+                        <p class="certificate-date">Issued: April 2024</p>
+                        <p class="certificate-description">Introduction to cloud services and deployment strategies.</p>
+                    </div>
+
+                    <!-- Duplicate certificates for seamless scrolling -->
+                    <!-- Certificate 1 -->
+                    <div class="certificate-card" data-certificate="1">
+                        <div class="certificate-icon icon-3d">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3 class="certificate-title">Web Development Fundamentals</h3>
+                        <p class="certificate-issuer">Coursera</p>
+                        <p class="certificate-date">Issued: June 2023</p>
+                        <p class="certificate-description">Completed comprehensive course covering HTML, CSS, and JavaScript fundamentals.</p>
+                    </div>
+
+                    <!-- Certificate 2 -->
+                    <div class="certificate-card" data-certificate="2">
+                        <div class="certificate-icon icon-3d">
+                            <i class="fab fa-python"></i>
+                        </div>
+                        <h3 class="certificate-title">Python for Data Science</h3>
+                        <p class="certificate-issuer">IBM</p>
+                        <p class="certificate-date">Issued: August 2023</p>
+                        <p class="certificate-description">Mastered Python programming for data analysis and visualization.</p>
+                    </div>
+
+                    <!-- Certificate 3 -->
+                    <div class="certificate-card" data-certificate="3">
+                        <div class="certificate-icon icon-3d">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h3 class="certificate-title">Database Management</h3>
+                        <p class="certificate-issuer">Oracle</p>
+                        <p class="certificate-date">Issued: October 2023</p>
+                        <p class="certificate-description">Learned SQL fundamentals and database design principles.</p>
+                    </div>
+
+                    <!-- Certificate 4 -->
+                    <div class="certificate-card" data-certificate="4">
+                        <div class="certificate-icon icon-3d">
+                            <i class="fab fa-js"></i>
+                        </div>
+                        <h3 class="certificate-title">JavaScript Algorithms</h3>
+                        <p class="certificate-issuer">freeCodeCamp</p>
+                        <p class="certificate-date">Issued: December 2023</p>
+                        <p class="certificate-description">Completed 300+ hours of JavaScript algorithm challenges.</p>
+                    </div>
+
+                    <!-- Certificate 5 -->
+                    <div class="certificate-card" data-certificate="5">
+                        <div class="certificate-icon icon-3d">
+                            <i class="fab fa-react"></i>
+                        </div>
+                        <h3 class="certificate-title">React Development</h3>
+                        <p class="certificate-issuer">Meta</p>
+                        <p class="certificate-date">Issued: February 2024</p>
+                        <p class="certificate-description">Built interactive UIs with React and modern frontend tools.</p>
+                    </div>
+
+                    <!-- Certificate 6 -->
+                    <div class="certificate-card" data-certificate="6">
+                        <div class="certificate-icon icon-3d">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <h3 class="certificate-title">Cloud Computing Basics</h3>
+                        <p class="certificate-issuer">AWS</p>
+                        <p class="certificate-date">Issued: April 2024</p>
+                        <p class="certificate-description">Introduction to cloud services and deployment strategies.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Certificate Modal -->
+    <div class="certificate-modal" id="certificateModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Certificate Details</h3>
+                <button class="close-modal" id="closeModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="certificate-image-container">
+                    <img src="" alt="Certificate" class="certificate-image" id="modalCertificateImage">
+                </div>
+                <div class="certificate-details">
+                    <div class="detail-item">
+                        <span class="detail-label">Certificate Name:</span>
+                        <span class="detail-value" id="modalCertificateName"></span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Issuing Organization:</span>
+                        <span class="detail-value" id="modalCertificateIssuer"></span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Issue Date:</span>
+                        <span class="detail-value" id="modalCertificateDate"></span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Certificate ID:</span>
+                        <span class="detail-value" id="modalCertificateId"></span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Description:</span>
+                        <p class="detail-value" id="modalCertificateDescription"></p>
+                    </div>
+                    <div class="certificate-actions">
+                        <button class="btn" id="downloadCertificate">
+                            <i class="fas fa-download"></i> Download Certificate
+                        </button>
+                        <button class="btn btn-outline" id="verifyCertificate">
+                            <i class="fas fa-external-link-alt"></i> Verify Online
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Contact Section -->
     <section id="contact">
@@ -1927,41 +2183,6 @@
             });
         });
 
-        // Testimonial Slider
-        const testimonialSlides = document.querySelectorAll('.testimonial-slide');
-        const sliderDots = document.querySelectorAll('.slider-dot');
-        let currentSlide = 0;
-
-        function showSlide(index) {
-            // Hide all slides
-            testimonialSlides.forEach(slide => {
-                slide.style.display = 'none';
-            });
-
-            // Remove active class from all dots
-            sliderDots.forEach(dot => {
-                dot.classList.remove('active');
-            });
-
-            // Show selected slide
-            testimonialSlides[index].style.display = 'block';
-            sliderDots[index].classList.add('active');
-            currentSlide = index;
-        }
-
-        // Add click event to dots
-        sliderDots.forEach((dot, index) => {
-            dot.addEventListener('click', () => {
-                showSlide(index);
-            });
-        });
-
-        // Auto-rotate slides
-        setInterval(() => {
-            currentSlide = (currentSlide + 1) % testimonialSlides.length;
-            showSlide(currentSlide);
-        }, 5000);
-
         // Back to Top Button
         const backToTopBtn = document.querySelector('.back-to-top');
 
@@ -2020,7 +2241,133 @@
         // Initialize animations
         window.addEventListener('load', animateOnScroll);
         window.addEventListener('scroll', animateOnScroll);
+
+        // Certificate Modal Functionality
+        const certificateModal = document.getElementById('certificateModal');
+        const closeModal = document.getElementById('closeModal');
+        const modalCertificateImage = document.getElementById('modalCertificateImage');
+        const modalCertificateName = document.getElementById('modalCertificateName');
+        const modalCertificateIssuer = document.getElementById('modalCertificateIssuer');
+        const modalCertificateDate = document.getElementById('modalCertificateDate');
+        const modalCertificateId = document.getElementById('modalCertificateId');
+        const modalCertificateDescription = document.getElementById('modalCertificateDescription');
+        const downloadCertificateBtn = document.getElementById('downloadCertificate');
+        const verifyCertificateBtn = document.getElementById('verifyCertificate');
+
+        // Certificate data
+        const certificates = {
+            1: {
+                name: "Web Development Fundamentals",
+                issuer: "Coursera",
+                date: "June 2023",
+                id: "CRS-WD-2023-001",
+                description: "Completed comprehensive course covering HTML, CSS, and JavaScript fundamentals. This certificate validates proficiency in front-end web development technologies and responsive design principles.",
+                image: "shivan.jpg",
+                downloadLink: "#",
+                verifyLink: "#"
+            },
+            2: {
+                name: "Python for Data Science",
+                issuer: "IBM",
+                date: "August 2023",
+                id: "IBM-PDS-2023-002",
+                description: "Mastered Python programming for data analysis and visualization. This certificate demonstrates expertise in using Python libraries like Pandas, NumPy, and Matplotlib for data manipulation and visualization.",
+                image: "shivan.jpg",
+                downloadLink: "#",
+                verifyLink: "#"
+            },
+            3: {
+                name: "Database Management",
+                issuer: "Oracle",
+                date: "October 2023",
+                id: "ORC-DB-2023-003",
+                description: "Learned SQL fundamentals and database design principles. This certificate validates skills in database normalization, SQL queries, and database administration concepts.",
+                image: "shivan.jpg",
+                downloadLink: "#",
+                verifyLink: "#"
+            },
+            4: {
+                name: "JavaScript Algorithms",
+                issuer: "freeCodeCamp",
+                date: "December 2023",
+                id: "FCC-JS-2023-004",
+                description: "Completed 300+ hours of JavaScript algorithm challenges. This certificate demonstrates proficiency in JavaScript programming, data structures, and algorithm implementation.",
+                image: "shivan.jpg",
+                downloadLink: "#",
+                verifyLink: "#"
+            },
+            5: {
+                name: "React Development",
+                issuer: "Meta",
+                date: "February 2024",
+                id: "META-RCT-2024-005",
+                description: "Built interactive UIs with React and modern frontend tools. This certificate validates skills in React components, state management, hooks, and modern frontend development practices.",
+                image: "shivan.jpg",
+                downloadLink: "#",
+                verifyLink: "#"
+            },
+            6: {
+                name: "Cloud Computing Basics",
+                issuer: "AWS",
+                date: "April 2024",
+                id: "AWS-CC-2024-006",
+                description: "Introduction to cloud services and deployment strategies. This certificate demonstrates understanding of cloud computing concepts, AWS services, and cloud deployment methodologies.",
+                image: "shivan.jpg",
+                downloadLink: "#",
+                verifyLink: "#"
+            }
+        };
+
+        // Open modal when certificate is clicked
+        document.querySelectorAll('.certificate-card').forEach(card => {
+            card.addEventListener('click', function() {
+                const certificateId = this.getAttribute('data-certificate');
+                const certificate = certificates[certificateId];
+                
+                if (certificate) {
+                    modalCertificateImage.src = certificate.image;
+                    modalCertificateName.textContent = certificate.name;
+                    modalCertificateIssuer.textContent = certificate.issuer;
+                    modalCertificateDate.textContent = certificate.date;
+                    modalCertificateId.textContent = certificate.id;
+                    modalCertificateDescription.textContent = certificate.description;
+                    
+                    // Set download and verify links
+                    downloadCertificateBtn.onclick = function() {
+                        window.open(certificate.downloadLink, '_blank');
+                    };
+                    
+                    verifyCertificateBtn.onclick = function() {
+                        window.open(certificate.verifyLink, '_blank');
+                    };
+                    
+                    certificateModal.classList.add('active');
+                    document.body.style.overflow = 'hidden'; // Prevent scrolling
+                }
+            });
+        });
+
+        // Close modal
+        closeModal.addEventListener('click', function() {
+            certificateModal.classList.remove('active');
+            document.body.style.overflow = 'auto'; // Re-enable scrolling
+        });
+
+        // Close modal when clicking outside
+        certificateModal.addEventListener('click', function(e) {
+            if (e.target === certificateModal) {
+                certificateModal.classList.remove('active');
+                document.body.style.overflow = 'auto'; // Re-enable scrolling
+            }
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && certificateModal.classList.contains('active')) {
+                certificateModal.classList.remove('active');
+                document.body.style.overflow = 'auto'; // Re-enable scrolling
+            }
+        });
     </script>
 </body>
-
 </html>
