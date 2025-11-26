@@ -5,45 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Developer Portfolio</title>
-    <link rel="icon" href="shivan.jpg" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
+    <link rel="icon" href="shivan.jpg" type="image/x-icon">
     <style>
-        /* CSS Variables for Theming */
+        /* CSS Variables for Theming - Sky Blue Theme */
         :root {
-            /* Theme 1: Orange, Black, Light Green (Default) */
-            --bg-primary: #1a1a1a;
-            --bg-secondary: #252525;
-            --text-primary: #ffffff;
-            --text-secondary: #cccccc;
-            --accent-color: #ff7b00;
-            --accent-secondary: #a5d610;
-            --accent-tertiary: #ffaa44;
-            --card-bg: rgba(37, 37, 37, 0.8);
-            --border-color: rgba(255, 123, 0, 0.3);
-            --shadow: 0 4px 20px rgba(165, 214, 16, 0.2);
-            --nav-bg: rgba(26, 26, 26, 0.95);
-            --toggle-bg: #333333;
-
-            /* Project card colors */
-            --project-1: #ff7b00;
-            --project-2: #ffaa44;
-            --project-3: #a5d610;
-            --project-4: #94c10e;
-            --project-5: #ffc470;
-
-            /* Transition */
-            --transition: all 0.3s ease;
-        }
-
-        /* Theme 2: Sky Blue, Navy, White */
-        .theme-skyblue {
+            /* Light Theme */
             --bg-primary: #0a192f;
             --bg-secondary: #112240;
             --text-primary: #e6f1ff;
             --text-secondary: #a8b2d1;
             --accent-color: #64ffda;
+            --accent-hover: #4fd8ba;
             --accent-secondary: #57cbff;
             --accent-tertiary: #4fc3f7;
             --card-bg: rgba(23, 42, 69, 0.8);
@@ -51,78 +26,41 @@
             --shadow: 0 4px 20px rgba(0, 150, 255, 0.2);
             --nav-bg: rgba(10, 25, 47, 0.95);
             --toggle-bg: #1d3b63;
+            --toggle-circle: #ffffff;
 
+            /* Project card colors */
             --project-1: #64ffda;
             --project-2: #57cbff;
             --project-3: #4fc3f7;
             --project-4: #29b6f6;
             --project-5: #03a9f4;
+
+            /* Transition */
+            --transition: all 0.3s ease;
         }
 
-        /* Theme 3: Purple, Pink, Light Blue */
-        .theme-purple {
-            --bg-primary: #1a1a2e;
-            --bg-secondary: #16213e;
-            --text-primary: #ffffff;
-            --text-secondary: #e6e6e6;
-            --accent-color: #9d4edd;
-            --accent-secondary: #ff6b6b;
-            --accent-tertiary: #4cc9f0;
-            --card-bg: rgba(26, 26, 46, 0.8);
-            --border-color: rgba(157, 78, 221, 0.3);
-            --shadow: 0 4px 20px rgba(255, 107, 107, 0.2);
-            --nav-bg: rgba(26, 26, 46, 0.95);
-            --toggle-bg: #4a4a72;
+        /* Dark Theme */
+        .dark-mode {
+            --bg-primary: #020c1b;
+            --bg-secondary: #0a192f;
+            --text-primary: #e6f1ff;
+            --text-secondary: #a8b2d1;
+            --accent-color: #64ffda;
+            --accent-hover: #4fd8ba;
+            --accent-secondary: #57cbff;
+            --accent-tertiary: #4fc3f7;
+            --card-bg: rgba(23, 42, 69, 0.9);
+            --border-color: rgba(100, 255, 218, 0.3);
+            --shadow: 0 4px 20px rgba(0, 150, 255, 0.3);
+            --nav-bg: rgba(2, 12, 27, 0.95);
+            --toggle-bg: #112240;
 
-            --project-1: #9d4edd;
-            --project-2: #ff6b6b;
-            --project-3: #4cc9f0;
-            --project-4: #7b2cbf;
-            --project-5: #ff8fa3;
-        }
-
-        /* Theme 4: Red, Gold, Dark Gray */
-        .theme-redgold {
-            --bg-primary: #1a1a1a;
-            --bg-secondary: #252525;
-            --text-primary: #ffffff;
-            --text-secondary: #cccccc;
-            --accent-color: #ff6b6b;
-            --accent-secondary: #ffd166;
-            --accent-tertiary: #ff8c42;
-            --card-bg: rgba(37, 37, 37, 0.8);
-            --border-color: rgba(255, 107, 107, 0.3);
-            --shadow: 0 4px 20px rgba(255, 209, 102, 0.2);
-            --nav-bg: rgba(26, 26, 26, 0.95);
-            --toggle-bg: #333333;
-
-            --project-1: #ff6b6b;
-            --project-2: #ffd166;
-            --project-3: #ff8c42;
-            --project-4: #ef476f;
-            --project-5: #ffb74d;
-        }
-
-        /* Theme 5: Teal, Coral, White */
-        .theme-teal {
-            --bg-primary: #1e3a5f;
-            --bg-secondary: #2c4b75;
-            --text-primary: #ffffff;
-            --text-secondary: #e6e6e6;
-            --accent-color: #2ec4b6;
-            --accent-secondary: #ff6b6b;
-            --accent-tertiary: #c0fdfb;
-            --card-bg: rgba(44, 75, 117, 0.8);
-            --border-color: rgba(46, 196, 182, 0.3);
-            --shadow: 0 4px 20px rgba(255, 107, 107, 0.2);
-            --nav-bg: rgba(30, 58, 95, 0.95);
-            --toggle-bg: #3a5f8a;
-
-            --project-1: #2ec4b6;
-            --project-2: #ff6b6b;
-            --project-3: #c0fdfb;
-            --project-4: #20a898;
-            --project-5: #ff8e8e;
+            /* Project card colors (darker shades) */
+            --project-1: #52e3c7;
+            --project-2: #46b8e6;
+            --project-3: #3fb0e0;
+            --project-4: #1e9fd8;
+            --project-5: #038edb;
         }
 
         /* Base Styles */
@@ -216,14 +154,14 @@
         .btn {
             display: inline-block;
             background: linear-gradient(135deg, var(--accent-color), var(--accent-secondary));
-            color: white;
+            color: #0a192f;
             padding: 12px 25px;
             border-radius: 50px;
             font-weight: 500;
             transition: var(--transition);
             border: none;
             cursor: pointer;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 15px rgba(100, 255, 218, 0.3);
             position: relative;
             overflow: hidden;
         }
@@ -235,7 +173,7 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
             transition: 0.5s;
         }
 
@@ -245,7 +183,7 @@
 
         .btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 7px 20px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 7px 20px rgba(100, 255, 218, 0.4);
         }
 
         .btn-outline {
@@ -257,7 +195,7 @@
 
         .btn-outline:hover {
             background: linear-gradient(135deg, var(--accent-color), var(--accent-secondary));
-            color: white;
+            color: #0a192f;
             border-color: transparent;
         }
 
@@ -294,7 +232,6 @@
         .nav-links {
             display: flex;
             gap: 30px;
-            align-items: center;
         }
 
         .nav-links a {
@@ -322,67 +259,6 @@
             display: flex;
             align-items: center;
             gap: 10px;
-            position: relative;
-        }
-
-        .theme-options {
-            position: absolute;
-            top: 40px;
-            right: 0;
-            background: var(--card-bg);
-            border-radius: 10px;
-            padding: 15px;
-            box-shadow: var(--shadow);
-            display: none;
-            flex-direction: column;
-            gap: 10px;
-            width: 150px;
-            border: 1px solid var(--border-color);
-            z-index: 1000;
-        }
-
-        .theme-options.show {
-            display: flex;
-        }
-
-        .theme-option {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            cursor: pointer;
-            padding: 8px;
-            border-radius: 5px;
-            transition: var(--transition);
-        }
-
-        .theme-option:hover {
-            background: var(--bg-secondary);
-        }
-
-        .theme-color {
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-        }
-
-        .theme-1 .theme-color {
-            background: linear-gradient(135deg, #ff7b00, #a5d610);
-        }
-
-        .theme-2 .theme-color {
-            background: linear-gradient(135deg, #64ffda, #57cbff);
-        }
-
-        .theme-3 .theme-color {
-            background: linear-gradient(135deg, #9d4edd, #ff6b6b);
-        }
-
-        .theme-4 .theme-color {
-            background: linear-gradient(135deg, #ff6b6b, #ffd166);
-        }
-
-        .theme-5 .theme-color {
-            background: linear-gradient(135deg, #2ec4b6, #ff6b6b);
         }
 
         .toggle-switch {
@@ -465,7 +341,7 @@
         .hero-image img {
             max-width: 100%;
             border-radius: 20px;
-            box-shadow: var(--shadow);
+            box-shadow: 0 15px 35px rgba(0, 150, 255, 0.2);
             position: relative;
             z-index: 2;
         }
@@ -505,7 +381,7 @@
             height: 45px;
             border-radius: 50%;
             background: linear-gradient(135deg, var(--accent-color), var(--accent-secondary));
-            color: white;
+            color: #0a192f;
             transition: var(--transition);
             position: relative;
             overflow: hidden;
@@ -518,7 +394,7 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
             transition: 0.5s;
         }
 
@@ -528,19 +404,7 @@
 
         .social-links a:hover {
             transform: translateY(-5px) rotate(5deg);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-        }
-
-        /* 3D Icons */
-        .icon-3d {
-            transition: all 0.3s ease;
-            transform-style: preserve-3d;
-            transform: perspective(500px) rotateY(0deg) rotateX(0deg);
-        }
-
-        .icon-3d:hover {
-            transform: perspective(500px) rotateY(15deg) rotateX(10deg) translateZ(10px);
-            filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.3));
+            box-shadow: 0 5px 15px rgba(100, 255, 218, 0.4);
         }
 
         /* Floating Animation */
@@ -586,7 +450,7 @@
         }
 
         .about-image img {
-            width: 100%;
+            max-width: 100%;
             border-radius: 20px;
             box-shadow: var(--shadow);
         }
@@ -672,7 +536,7 @@
         .education:hover,
         .experience:hover {
             transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 15px 30px rgba(0, 150, 255, 0.3);
         }
 
         .education h3,
@@ -788,7 +652,7 @@
 
         .project-card:hover {
             transform: translateY(-10px) scale(1.02);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 15px 30px rgba(0, 150, 255, 0.3);
         }
 
         .project-image {
@@ -840,7 +704,7 @@
 
         .project-tag {
             background: linear-gradient(135deg, var(--accent-color), var(--accent-secondary));
-            color: white;
+            color: #0a192f;
             padding: 5px 12px;
             border-radius: 20px;
             font-size: 0.8rem;
@@ -851,220 +715,111 @@
             gap: 10px;
         }
 
-        /* Certificates Section */
-        #certificates {
+        /* Testimonials Section */
+        #testimonials {
             background-color: transparent;
-            overflow: hidden;
         }
 
-        .certificates-container {
+        .testimonials-container {
             position: relative;
-            width: 100%;
-            overflow: hidden;
-            padding: 20px 0;
-        }
-
-        .certificates-track {
-            display: flex;
-            gap: 30px;
-            animation: scrollCertificates 30s linear infinite;
-        }
-
-        .certificate-card {
-            flex: 0 0 auto;
-            width: 300px;
-            background: var(--card-bg);
-            border-radius: 15px;
-            padding: 25px;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-            border: 1px solid var(--border-color);
-            position: relative;
-            overflow: hidden;
-            cursor: pointer;
-        }
-
-        .certificate-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 5px;
-            background: linear-gradient(90deg, var(--accent-color), var(--accent-secondary));
-            transition: var(--transition);
-        }
-
-        .certificate-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-        }
-
-        .certificate-card:hover::before {
-            height: 100%;
-            opacity: 0.05;
-        }
-
-        .certificate-icon {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-            background: linear-gradient(135deg, var(--accent-color), var(--accent-secondary));
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-
-        .certificate-title {
-            font-size: 1.3rem;
-            margin-bottom: 10px;
-            color: var(--text-primary);
-        }
-
-        .certificate-issuer {
-            font-size: 1rem;
-            margin-bottom: 10px;
-            color: var(--accent-color);
-        }
-
-        .certificate-date {
-            font-size: 0.9rem;
-            color: var(--text-secondary);
-            margin-bottom: 15px;
-        }
-
-        .certificate-description {
-            font-size: 0.9rem;
-            color: var(--text-secondary);
-        }
-
-        @keyframes scrollCertificates {
-            0% {
-                transform: translateX(0);
-            }
-            100% {
-                transform: translateX(calc(-330px * 6));
-            }
-        }
-
-        /* Pause animation on hover */
-        .certificates-track:hover {
-            animation-play-state: paused;
-        }
-
-        /* Certificate Modal */
-        .certificate-modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.8);
-            z-index: 2000;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
-
-        .certificate-modal.active {
-            display: flex;
-        }
-
-        .modal-content {
-            background: var(--card-bg);
-            border-radius: 15px;
             max-width: 800px;
-            width: 100%;
-            max-height: 90vh;
-            overflow-y: auto;
+            margin: 0 auto;
+        }
+
+        .testimonial-slide {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 15px;
             box-shadow: var(--shadow);
+            margin: 0 20px;
+            text-align: center;
+            transition: var(--transition);
             border: 1px solid var(--border-color);
+        }
+
+        .testimonial-content {
+            margin-bottom: 20px;
+            font-style: italic;
             position: relative;
-            animation: modalFadeIn 0.3s ease-out;
         }
 
-        @keyframes modalFadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(-50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        .testimonial-content::before,
+        .testimonial-content::after {
+            content: '"';
+            font-size: 3rem;
+            color: var(--accent-color);
+            opacity: 0.3;
+            position: absolute;
         }
 
-        .modal-header {
+        .testimonial-content::before {
+            top: -20px;
+            left: -10px;
+        }
+
+        .testimonial-content::after {
+            bottom: -40px;
+            right: -10px;
+        }
+
+        .testimonial-author {
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
             align-items: center;
-            padding: 20px 30px;
-            border-bottom: 1px solid var(--border-color);
         }
 
-        .modal-header h3 {
-            margin: 0;
-            color: var(--text-primary);
+        .author-image {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-bottom: 10px;
+            border: 3px solid var(--accent-color);
+            box-shadow: 0 0 15px rgba(100, 255, 218, 0.3);
         }
 
-        .close-modal {
-            background: none;
-            border: none;
-            color: var(--text-secondary);
-            font-size: 1.5rem;
-            cursor: pointer;
+        .author-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
             transition: var(--transition);
         }
 
-        .close-modal:hover {
-            color: var(--accent-color);
-            transform: rotate(90deg);
+        .author-image:hover img {
+            transform: scale(1.1);
         }
 
-        .modal-body {
-            padding: 30px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-        }
-
-        .certificate-image {
-            width: 100%;
-            border-radius: 10px;
-            box-shadow: var(--shadow);
-        }
-
-        .certificate-details {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        .detail-item {
-            display: flex;
-            flex-direction: column;
-            gap: 5px;
-        }
-
-        .detail-label {
+        .author-name {
             font-weight: 600;
-            color: var(--accent-color);
+            margin-bottom: 5px;
         }
 
-        .detail-value {
-            color: var(--text-primary);
+        .author-position {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
         }
 
-        .certificate-actions {
+        /* Slider Navigation */
+        .slider-nav {
             display: flex;
-            gap: 15px;
-            margin-top: 20px;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 30px;
         }
 
-        @media (max-width: 768px) {
-            .modal-body {
-                grid-template-columns: 1fr;
-            }
+        .slider-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--bg-secondary);
+            cursor: pointer;
+            transition: var(--transition);
+            border: 1px solid var(--accent-color);
+        }
+
+        .slider-dot.active {
+            background: linear-gradient(135deg, var(--accent-color), var(--accent-secondary));
+            transform: scale(1.3);
         }
 
         /* Contact Section */
@@ -1098,7 +853,7 @@
 
         .contact-item:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 10px 25px rgba(0, 150, 255, 0.3);
         }
 
         .contact-icon {
@@ -1106,12 +861,12 @@
             height: 60px;
             border-radius: 50%;
             background: linear-gradient(135deg, var(--accent-color), var(--accent-secondary));
-            color: white;
+            color: #0a192f;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 1.5rem;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 5px 15px rgba(100, 255, 218, 0.3);
         }
 
         .contact-form {
@@ -1145,7 +900,7 @@
         .form-control:focus {
             outline: none;
             border-color: var(--accent-color);
-            box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0 0 3px rgba(100, 255, 218, 0.2);
         }
 
         textarea.form-control {
@@ -1197,7 +952,7 @@
             height: 60px;
             border-radius: 50%;
             background: linear-gradient(135deg, var(--accent-color), var(--accent-secondary));
-            color: white;
+            color: #0a192f;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -1207,7 +962,7 @@
             visibility: hidden;
             transition: var(--transition);
             z-index: 999;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 5px 15px rgba(100, 255, 218, 0.4);
         }
 
         .back-to-top.show {
@@ -1217,7 +972,7 @@
 
         .back-to-top:hover {
             transform: translateY(-5px) rotate(5deg);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 8px 20px rgba(100, 255, 218, 0.5);
         }
 
         /* Animations */
@@ -1258,6 +1013,13 @@
 
         .pulse {
             animation: pulse 2s infinite;
+        }
+
+        /* Glow Animation */
+        @keyframes glow {
+            0% { box-shadow: 0 0 10px rgba(100, 255, 218, 0.5); }
+            50% { box-shadow: 0 0 20px rgba(100, 255, 218, 0.8); }
+            100% { box-shadow: 0 0 10px rgba(100, 255, 218, 0.5); }
         }
 
         /* Wave Animation */
@@ -1356,28 +1118,6 @@
                 width: 100%;
                 text-align: center;
             }
-
-            .theme-options {
-                position: fixed;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                width: 80%;
-                max-width: 300px;
-            }
-
-            .certificate-card {
-                width: 250px;
-            }
-
-            @keyframes scrollCertificates {
-                0% {
-                    transform: translateX(0);
-                }
-                100% {
-                    transform: translateX(calc(-280px * 6));
-                }
-            }
         }
 
         @media (max-width: 576px) {
@@ -1404,19 +1144,6 @@
             .project-card {
                 max-width: 100%;
             }
-
-            .certificate-card {
-                width: 220px;
-            }
-
-            @keyframes scrollCertificates {
-                0% {
-                    transform: translateX(0);
-                }
-                100% {
-                    transform: translateX(calc(-250px * 6));
-                }
-            }
         }
 
     </style>
@@ -1430,43 +1157,24 @@
     <header>
         <div class="container">
             <nav>
-                <a href="#" class="logo animate">Shivan Mishra</a>
+                <a href="#" class="logo animate">Portfolio</a>
 
                 <div class="nav-links">
                     <a href="#hero" class="animate delay-1">Home</a>
                     <a href="#about" class="animate delay-1">About</a>
                     <a href="#resume" class="animate delay-2">Resume</a>
                     <a href="#projects" class="animate delay-2">Projects</a>
-                    <a href="#certificates" class="animate delay-3">Certificates</a>
+                    <a href="#testimonials" class="animate delay-3">Testimonials</a>
                     <a href="#contact" class="animate delay-3">Contact</a>
-                    
-                    <div class="theme-toggle">
-                        <button id="themeToggleBtn" class="btn">
-                            <i class="fas fa-palette"></i> Themes
-                        </button>
-                        <div class="theme-options" id="themeOptions">
-                            <div class="theme-option theme-1" data-theme="default">
-                                <div class="theme-color"></div>
-                                <span>Orange-Green</span>
-                            </div>
-                            <div class="theme-option theme-2" data-theme="skyblue">
-                                <div class="theme-color"></div>
-                                <span>Sky Blue</span>
-                            </div>
-                            <div class="theme-option theme-3" data-theme="purple">
-                                <div class="theme-color"></div>
-                                <span>Purple-Pink</span>
-                            </div>
-                            <div class="theme-option theme-4" data-theme="redgold">
-                                <div class="theme-color"></div>
-                                <span>Red-Gold</span>
-                            </div>
-                            <div class="theme-option theme-5" data-theme="teal">
-                                <div class="theme-color"></div>
-                                <span>Teal-Coral</span>
-                            </div>
-                        </div>
-                    </div>
+                </div>
+
+                <div class="theme-toggle animate delay-3">
+                    <span class="toggle-label"><i class="fas fa-sun"></i></span>
+                    <label class="toggle-switch">
+                        <input type="checkbox" id="themeToggle">
+                        <span class="toggle-slider"></span>
+                    </label>
+                    <span class="toggle-label"><i class="fas fa-moon"></i></span>
                 </div>
 
                 <button class="mobile-menu-btn animate delay-3">
@@ -1493,10 +1201,10 @@
                     </div>
 
                     <div class="social-links animate delay-3">
-                        <a href="https://github.com/shivan632" aria-label="GitHub" class="icon-3d" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/shivan-mishra-b7156a317/" aria-label="LinkedIn" class="icon-3d" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="https://x.com/ShivanMish31063" aria-label="Twitter" class="icon-3d" target="_blank"><i class="fab fa-twitter"></i></a>
-                        <a href="https://www.instagram.com/shivan4195/" aria-label="Instagram" class="icon-3d" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
 
@@ -1536,27 +1244,27 @@
                     <h3 style="margin-top: 30px;">My Skills</h3>
                     <div class="skills-container">
                         <div class="skill-item">
-                            <div class="skill-icon icon-3d"><i class="fab fa-js"></i></div>
+                            <div class="skill-icon"><i class="fab fa-js"></i></div>
                             <h4>JavaScript</h4>
                         </div>
                         <div class="skill-item">
-                            <div class="skill-icon icon-3d"><i class="fab fa-python"></i></div>
+                            <div class="skill-icon"><i class="fab fa-python"></i></div>
                             <h4>Python</h4>
                         </div>
                         <div class="skill-item">
-                            <div class="skill-icon icon-3d"><i class="fab fa-java"></i></div>
+                            <div class="skill-icon"><i class="fab fa-java"></i></div>
                             <h4>Java</h4>
                         </div>
                         <div class="skill-item">
-                            <div class="skill-icon icon-3d"><i class="fas fa-r"></i></div>
+                            <div class="skill-icon"><i class="fas fa-r"></i></div>
                             <h4>R language</h4>
                         </div>
                         <div class="skill-item">
-                            <div class="skill-icon icon-3d"><i class="fab fa-html5"></i></div>
+                            <div class="skill-icon"><i class="fab fa-html5"></i></div>
                             <h4>HTML5</h4>
                         </div>
                         <div class="skill-item">
-                            <div class="skill-icon icon-3d"><i class="fab fa-css3-alt"></i></div>
+                            <div class="skill-icon"><i class="fab fa-css3-alt"></i></div>
                             <h4>CSS3</h4>
                         </div>
                     </div>
@@ -1572,7 +1280,7 @@
 
             <div class="resume-container animate delay-1">
                 <div class="education">
-                    <h3><i class="fas fa-graduation-cap icon-3d"></i> Education</h3>
+                    <h3><i class="fas fa-graduation-cap"></i> Education</h3>
                     <div class="resume-item">
                         <h4>Bachelor in Computer & Applications</h4>
                         <h5>United University | 2023 - 2026 | CGPA:8.61</h5>
@@ -1586,7 +1294,7 @@
                 </div>
 
                 <div class="experience animate delay-2">
-                    <h3><i class="fas fa-briefcase icon-3d"></i> Internship</h3>
+                    <h3><i class="fas fa-briefcase"></i> Internship</h3>
                     <div class="resume-item">
                         <h4>AIML Intern</h4>
                         <h5>TechCorp Inc. | 2025 - Present</h5>
@@ -1601,7 +1309,7 @@
             </div>
 
             <div class="download-resume animate delay-3">
-                <a href="Shivan-Resume.pdf" download class="btn">
+                <a href="SHIVAN-Resume.pdf" download class="btn">
                     <i class="fas fa-download"></i> Download Resume
                 </a>
             </div>
@@ -1631,7 +1339,7 @@
                         <div class="project-links">
                             <a href="https://project-food-website.vercel.app/" target="_blank" class="btn"
                                 style="background: linear-gradient(135deg, var(--project-1), var(--project-2)); border: none;">Live Demo</a>
-                            <a href="https://github.com/shivan632/Project-Food-Website.git" target="_blank" class="btn btn-outline"
+                            <a href="https://github.com/shivan632/Project-Food-Website.git" class="btn btn-outline"
                                 style="border-color: var(--project-1); color: var(--project-1);">Code</a>
                         </div>
                     </div>
@@ -1655,7 +1363,7 @@
                         <div class="project-links">
                             <a href="https://university-selector.vercel.app/" target="_blank" class="btn"
                                 style="background: linear-gradient(135deg, var(--project-3), var(--project-4)); border: none;">Live Demo</a>
-                            <a href="https://github.com/shivan632/University-Selector.git" target="_blank" class="btn btn-outline"
+                            <a href="https://github.com/shivan632/University-Selector.git" class="btn btn-outline"
                                 style="border-color: var(--project-3); color: var(--project-3);">Code</a>
                         </div>
                     </div>
@@ -1672,13 +1380,13 @@
                         <p class="project-description">Animeflix delivers bite-sized anime clips and summaries from a wide range of series, all in one place and having 
                             game of Question asking from the series</p>
                         <div class="project-tags">
-                            <span class="project-tag">HTML-5</span>
+                            <san class="project-tag">HTML-5</san>
                             <span class="project-tag">CSS-3</span>
                             <span class="project-tag">JavaScript</span>
                         </div>
                         <div class="project-links">
                             <a href="https://ani-flix-two.vercel.app/" target="_blank" class="btn" style="background: linear-gradient(135deg, var(--project-5), var(--project-3)); border: none;">Live Demo</a>
-                            <a href="https://github.com/shivan632/AniFlix.git" target="_blank"  class="btn btn-outline"
+                            <a href="#" class="btn btn-outline"
                                 style="border-color: var(--project-5); color: var(--project-5);">Code</a>
                         </div>
                     </div>
@@ -1687,194 +1395,73 @@
         </div>
     </section>
 
-    <!-- Certificates Section -->
-    <section id="certificates">
+    <!-- Testimonials Section -->
+    <section id="testimonials">
         <div class="container">
-            <h2 class="animate">My Certificates</h2>
+            <h2 class="animate">Testimonials</h2>
 
-            <div class="certificates-container">
-                <div class="certificates-track">
-                    <!-- Certificate 1 -->
-                    <div class="certificate-card animate" data-certificate="1">
-                        <div class="certificate-icon icon-3d">
-                            <i class="fas fa-code"></i>
-                        </div>
-                        <h3 class="certificate-title">Web Development Fundamentals</h3>
-                        <p class="certificate-issuer">Coursera</p>
-                        <p class="certificate-date">Issued: June 2023</p>
-                        <p class="certificate-description">Completed comprehensive course covering HTML, CSS, and JavaScript fundamentals.</p>
+            <div class="testimonials-container">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-slide animate delay-1" style="display: block;">
+                    <div class="testimonial-content">
+                        <p>"Alex transformed our web presence with his technical expertise and attention to detail.
+                            The application he built for us has significantly improved our operational efficiency
+                            and customer satisfaction."</p>
                     </div>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <img src="shivan.jpg" alt="Sarah Johnson">
+                        </div>
+                        <div>
+                            <h4 class="author-name">Tushar Singh</h4>
+                            <p class="author-position">Student</p>
+                        </div>
+                    </div>
+                </div>
 
-                    <!-- Certificate 2 -->
-                    <div class="certificate-card animate delay-1" data-certificate="2">
-                        <div class="certificate-icon icon-3d">
-                            <i class="fab fa-python"></i>
-                        </div>
-                        <h3 class="certificate-title">Python for Data Science</h3>
-                        <p class="certificate-issuer">IBM</p>
-                        <p class="certificate-date">Issued: August 2023</p>
-                        <p class="certificate-description">Mastered Python programming for data analysis and visualization.</p>
+                <!-- Testimonial 2 -->
+                <div class="testimonial-slide animate delay-1" style="display: none;">
+                    <div class="testimonial-content">
+                        <p>"Working with Alex was a pleasure. He delivered our project ahead of schedule and was
+                            always available to answer questions and make adjustments. His code is clean and
+                            well-documented."</p>
                     </div>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <img src="shivan.jpg" alt="Michael Chen">
+                        </div>
+                        <div>
+                            <h4 class="author-name">Shivam kr Mishra</h4>
+                            <p class="author-position">Employe, Full Stack Developer</p>
+                        </div>
+                    </div>
+                </div>
 
-                    <!-- Certificate 3 -->
-                    <div class="certificate-card animate delay-2" data-certificate="3">
-                        <div class="certificate-icon icon-3d">
-                            <i class="fas fa-database"></i>
-                        </div>
-                        <h3 class="certificate-title">Database Management</h3>
-                        <p class="certificate-issuer">Oracle</p>
-                        <p class="certificate-date">Issued: October 2023</p>
-                        <p class="certificate-description">Learned SQL fundamentals and database design principles.</p>
+                <!-- Testimonial 3 -->
+                <div class="testimonial-slide animate delay-1" style="display: none;">
+                    <div class="testimonial-content">
+                        <p>"Alex's ability to understand complex requirements and translate them into elegant
+                            solutions is remarkable. He's become our go-to developer for all our web projects."</p>
                     </div>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <img src="shivan.jpg" alt="Emily Rodriguez">
+                        </div>
+                        <div>
+                            <h4 class="author-name">Rohit Singh</h4>
+                            <p class="author-position">Hr, Digital Creations</p>
+                        </div>
+                    </div>
+                </div>
 
-                    <!-- Certificate 4 -->
-                    <div class="certificate-card animate" data-certificate="4">
-                        <div class="certificate-icon icon-3d">
-                            <i class="fab fa-js"></i>
-                        </div>
-                        <h3 class="certificate-title">JavaScript Algorithms</h3>
-                        <p class="certificate-issuer">freeCodeCamp</p>
-                        <p class="certificate-date">Issued: December 2023</p>
-                        <p class="certificate-description">Completed 300+ hours of JavaScript algorithm challenges.</p>
-                    </div>
-
-                    <!-- Certificate 5 -->
-                    <div class="certificate-card animate delay-1" data-certificate="5">
-                        <div class="certificate-icon icon-3d">
-                            <i class="fab fa-react"></i>
-                        </div>
-                        <h3 class="certificate-title">React Development</h3>
-                        <p class="certificate-issuer">Meta</p>
-                        <p class="certificate-date">Issued: February 2024</p>
-                        <p class="certificate-description">Built interactive UIs with React and modern frontend tools.</p>
-                    </div>
-
-                    <!-- Certificate 6 -->
-                    <div class="certificate-card animate delay-2" data-certificate="6">
-                        <div class="certificate-icon icon-3d">
-                            <i class="fas fa-cloud"></i>
-                        </div>
-                        <h3 class="certificate-title">Cloud Computing Basics</h3>
-                        <p class="certificate-issuer">AWS</p>
-                        <p class="certificate-date">Issued: April 2024</p>
-                        <p class="certificate-description">Introduction to cloud services and deployment strategies.</p>
-                    </div>
-
-                    <!-- Duplicate certificates for seamless scrolling -->
-                    <!-- Certificate 1 -->
-                    <div class="certificate-card" data-certificate="1">
-                        <div class="certificate-icon icon-3d">
-                            <i class="fas fa-code"></i>
-                        </div>
-                        <h3 class="certificate-title">Web Development Fundamentals</h3>
-                        <p class="certificate-issuer">Coursera</p>
-                        <p class="certificate-date">Issued: June 2023</p>
-                        <p class="certificate-description">Completed comprehensive course covering HTML, CSS, and JavaScript fundamentals.</p>
-                    </div>
-
-                    <!-- Certificate 2 -->
-                    <div class="certificate-card" data-certificate="2">
-                        <div class="certificate-icon icon-3d">
-                            <i class="fab fa-python"></i>
-                        </div>
-                        <h3 class="certificate-title">Python for Data Science</h3>
-                        <p class="certificate-issuer">IBM</p>
-                        <p class="certificate-date">Issued: August 2023</p>
-                        <p class="certificate-description">Mastered Python programming for data analysis and visualization.</p>
-                    </div>
-
-                    <!-- Certificate 3 -->
-                    <div class="certificate-card" data-certificate="3">
-                        <div class="certificate-icon icon-3d">
-                            <i class="fas fa-database"></i>
-                        </div>
-                        <h3 class="certificate-title">Database Management</h3>
-                        <p class="certificate-issuer">Oracle</p>
-                        <p class="certificate-date">Issued: October 2023</p>
-                        <p class="certificate-description">Learned SQL fundamentals and database design principles.</p>
-                    </div>
-
-                    <!-- Certificate 4 -->
-                    <div class="certificate-card" data-certificate="4">
-                        <div class="certificate-icon icon-3d">
-                            <i class="fab fa-js"></i>
-                        </div>
-                        <h3 class="certificate-title">JavaScript Algorithms</h3>
-                        <p class="certificate-issuer">freeCodeCamp</p>
-                        <p class="certificate-date">Issued: December 2023</p>
-                        <p class="certificate-description">Completed 300+ hours of JavaScript algorithm challenges.</p>
-                    </div>
-
-                    <!-- Certificate 5 -->
-                    <div class="certificate-card" data-certificate="5">
-                        <div class="certificate-icon icon-3d">
-                            <i class="fab fa-react"></i>
-                        </div>
-                        <h3 class="certificate-title">React Development</h3>
-                        <p class="certificate-issuer">Meta</p>
-                        <p class="certificate-date">Issued: February 2024</p>
-                        <p class="certificate-description">Built interactive UIs with React and modern frontend tools.</p>
-                    </div>
-
-                    <!-- Certificate 6 -->
-                    <div class="certificate-card" data-certificate="6">
-                        <div class="certificate-icon icon-3d">
-                            <i class="fas fa-cloud"></i>
-                        </div>
-                        <h3 class="certificate-title">Cloud Computing Basics</h3>
-                        <p class="certificate-issuer">AWS</p>
-                        <p class="certificate-date">Issued: April 2024</p>
-                        <p class="certificate-description">Introduction to cloud services and deployment strategies.</p>
-                    </div>
+                <div class="slider-nav animate delay-2">
+                    <div class="slider-dot active" data-slide="0"></div>
+                    <div class="slider-dot" data-slide="1"></div>
+                    <div class="slider-dot" data-slide="2"></div>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- Certificate Modal -->
-    <div class="certificate-modal" id="certificateModal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h3>Certificate Details</h3>
-                <button class="close-modal" id="closeModal">&times;</button>
-            </div>
-            <div class="modal-body">
-                <div class="certificate-image-container">
-                    <img src="" alt="Certificate" class="certificate-image" id="modalCertificateImage">
-                </div>
-                <div class="certificate-details">
-                    <div class="detail-item">
-                        <span class="detail-label">Certificate Name:</span>
-                        <span class="detail-value" id="modalCertificateName"></span>
-                    </div>
-                    <div class="detail-item">
-                        <span class="detail-label">Issuing Organization:</span>
-                        <span class="detail-value" id="modalCertificateIssuer"></span>
-                    </div>
-                    <div class="detail-item">
-                        <span class="detail-label">Issue Date:</span>
-                        <span class="detail-value" id="modalCertificateDate"></span>
-                    </div>
-                    <div class="detail-item">
-                        <span class="detail-label">Certificate ID:</span>
-                        <span class="detail-value" id="modalCertificateId"></span>
-                    </div>
-                    <div class="detail-item">
-                        <span class="detail-label">Description:</span>
-                        <p class="detail-value" id="modalCertificateDescription"></p>
-                    </div>
-                    <div class="certificate-actions">
-                        <button class="btn" id="downloadCertificate">
-                            <i class="fas fa-download"></i> Download Certificate
-                        </button>
-                        <button class="btn btn-outline" id="verifyCertificate">
-                            <i class="fas fa-external-link-alt"></i> Verify Online
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- Contact Section -->
     <section id="contact">
@@ -1884,7 +1471,7 @@
             <div class="contact-container">
                 <div class="contact-info animate delay-1">
                     <div class="contact-item">
-                        <div class="contact-icon icon-3d">
+                        <div class="contact-icon">
                             <i class="fas fa-map-marker-alt"></i>
                         </div>
                         <div>
@@ -1894,7 +1481,7 @@
                     </div>
 
                     <div class="contact-item">
-                        <div class="contact-icon icon-3d">
+                        <div class="contact-icon">
                             <i class="fas fa-envelope"></i>
                         </div>
                         <div>
@@ -1904,7 +1491,7 @@
                     </div>
 
                     <div class="contact-item">
-                        <div class="contact-icon icon-3d">
+                        <div class="contact-icon">
                             <i class="fas fa-phone-alt"></i>
                         </div>
                         <div>
@@ -1914,34 +1501,33 @@
                     </div>
 
                     <div class="social-links">
-                        <a href="https://github.com/shivan632" aria-label="GitHub" class="icon-3d" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/shivan-mishra-b7156a317/" aria-label="LinkedIn" class="icon-3d" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="https://x.com/ShivanMish31063" aria-label="Twitter" class="icon-3d" target="_blank"><i class="fab fa-twitter"></i></a>
-                        <a href="https://www.instagram.com/shivan4195/" aria-label="Instagram" class="icon-3d" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
 
                 <div class="contact-form animate delay-2">
-                    <form id="contactForm" action="/api/submit-form" method="POST">
-
+                    <form id="contactForm">
                         <div class="form-group">
                             <label for="name">Name</label>
-                            <input type="text" name="full_name" id="name" class="form-control" required>
+                            <input type="text" id="name" class="form-control" required>
                         </div>
 
                         <div class="form-group">
                             <label for="email">Email</label>
-                            <input type="email" name="email" id="email" class="form-control" required>
+                            <input type="email" id="email" class="form-control" required>
                         </div>
 
                         <div class="form-group">
                             <label for="subject">Subject</label>
-                            <input type="text" name="subject" id="subject" class="form-control" required>
+                            <input type="text" id="subject" class="form-control" required>
                         </div>
 
                         <div class="form-group">
                             <label for="message">Message</label>
-                            <textarea id="message" name="message" class="form-control" required></textarea>
+                            <textarea id="message" class="form-control" required></textarea>
                         </div>
 
                         <button type="submit" class="btn">Send Message</button>
@@ -1973,7 +1559,7 @@
     </div>
 
     <script>
-        // Enhanced 3D Particle Background
+        // Enhanced 3D Particle Background with Sky Blue Colors
         const canvas = document.getElementById('particle-canvas');
         const ctx = canvas.getContext('2d');
         let particlesArray = [];
@@ -2002,12 +1588,8 @@
         // Create particle class
         class Particle {
             constructor() {
-                // Use theme colors
-                const colors = [
-                    getComputedStyle(document.documentElement).getPropertyValue('--accent-color'),
-                    getComputedStyle(document.documentElement).getPropertyValue('--accent-secondary'),
-                    getComputedStyle(document.documentElement).getPropertyValue('--accent-tertiary')
-                ];
+                // Use sky blue colors
+                const colors = ['#64ffda', '#57cbff', '#4fc3f7', '#29b6f6', '#03a9f4'];
                 this.x = Math.random() * canvas.width;
                 this.y = Math.random() * canvas.height;
                 this.size = Math.random() * 4 + 1;
@@ -2101,51 +1683,50 @@
         init();
         animate();
         
-        // Theme Changer Functionality
-        const themeToggleBtn = document.getElementById('themeToggleBtn');
-        const themeOptions = document.getElementById('themeOptions');
+        // Theme Toggle Functionality
+        const themeToggle = document.getElementById('themeToggle');
         const body = document.body;
-        
-        // Show/hide theme options
-        themeToggleBtn.addEventListener('click', function() {
-            themeOptions.classList.toggle('show');
-        });
-        
-        // Close theme options when clicking outside
-        document.addEventListener('click', function(event) {
-            if (!themeToggleBtn.contains(event.target) && !themeOptions.contains(event.target)) {
-                themeOptions.classList.remove('show');
-            }
-        });
-        
-        // Theme selection
-        document.querySelectorAll('.theme-option').forEach(option => {
-            option.addEventListener('click', function() {
-                const theme = this.getAttribute('data-theme');
-                
-                // Remove all theme classes
-                body.classList.remove('theme-skyblue', 'theme-purple', 'theme-redgold', 'theme-teal');
-                
-                // Add selected theme class
-                if (theme !== 'default') {
-                    body.classList.add(`theme-${theme}`);
-                }
-                
-                // Close theme options
-                themeOptions.classList.remove('show');
-                
-                // Update particle colors
-                init();
-                
-                // Save theme preference
-                localStorage.setItem('theme', theme);
-            });
-        });
-        
-        // Load saved theme
+        const sunIcon = document.querySelector('.fa-sun');
+        const moonIcon = document.querySelector('.fa-moon');
+
+        // Check for saved user preference or use system preference
         const savedTheme = localStorage.getItem('theme');
-        if (savedTheme && savedTheme !== 'default') {
-            body.classList.add(`theme-${savedTheme}`);
+        const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+
+        // Apply initial theme
+        if (savedTheme === 'dark' || (!savedTheme && prefersDarkScheme.matches)) {
+            body.classList.add('dark-mode');
+            themeToggle.checked = true;
+            updateIcons(true);
+        } else {
+            updateIcons(false);
+        }
+
+        // Theme toggle event
+        themeToggle.addEventListener('change', function () {
+            if (this.checked) {
+                body.classList.add('dark-mode');
+                localStorage.setItem('theme', 'dark');
+                updateIcons(true);
+            } else {
+                body.classList.remove('dark-mode');
+                localStorage.setItem('theme', 'light');
+                updateIcons(false);
+            }
+            
+            // Update particle colors
+            init();
+        });
+
+        // Update icon colors based on theme
+        function updateIcons(isDark) {
+            if (isDark) {
+                sunIcon.style.color = 'var(--text-secondary)';
+                moonIcon.style.color = 'var(--accent-color)';
+            } else {
+                sunIcon.style.color = 'var(--accent-color)';
+                moonIcon.style.color = 'var(--text-secondary)';
+            }
         }
 
         // Mobile Menu Toggle
@@ -2182,6 +1763,41 @@
                 }
             });
         });
+
+        // Testimonial Slider
+        const testimonialSlides = document.querySelectorAll('.testimonial-slide');
+        const sliderDots = document.querySelectorAll('.slider-dot');
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            // Hide all slides
+            testimonialSlides.forEach(slide => {
+                slide.style.display = 'none';
+            });
+
+            // Remove active class from all dots
+            sliderDots.forEach(dot => {
+                dot.classList.remove('active');
+            });
+
+            // Show selected slide
+            testimonialSlides[index].style.display = 'block';
+            sliderDots[index].classList.add('active');
+            currentSlide = index;
+        }
+
+        // Add click event to dots
+        sliderDots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                showSlide(index);
+            });
+        });
+
+        // Auto-rotate slides
+        setInterval(() => {
+            currentSlide = (currentSlide + 1) % testimonialSlides.length;
+            showSlide(currentSlide);
+        }, 5000);
 
         // Back to Top Button
         const backToTopBtn = document.querySelector('.back-to-top');
@@ -2241,133 +1857,7 @@
         // Initialize animations
         window.addEventListener('load', animateOnScroll);
         window.addEventListener('scroll', animateOnScroll);
-
-        // Certificate Modal Functionality
-        const certificateModal = document.getElementById('certificateModal');
-        const closeModal = document.getElementById('closeModal');
-        const modalCertificateImage = document.getElementById('modalCertificateImage');
-        const modalCertificateName = document.getElementById('modalCertificateName');
-        const modalCertificateIssuer = document.getElementById('modalCertificateIssuer');
-        const modalCertificateDate = document.getElementById('modalCertificateDate');
-        const modalCertificateId = document.getElementById('modalCertificateId');
-        const modalCertificateDescription = document.getElementById('modalCertificateDescription');
-        const downloadCertificateBtn = document.getElementById('downloadCertificate');
-        const verifyCertificateBtn = document.getElementById('verifyCertificate');
-
-        // Certificate data
-        const certificates = {
-            1: {
-                name: "Web Development Fundamentals",
-                issuer: "Coursera",
-                date: "June 2023",
-                id: "CRS-WD-2023-001",
-                description: "Completed comprehensive course covering HTML, CSS, and JavaScript fundamentals. This certificate validates proficiency in front-end web development technologies and responsive design principles.",
-                image: "shivan.jpg",
-                downloadLink: "#",
-                verifyLink: "#"
-            },
-            2: {
-                name: "Python for Data Science",
-                issuer: "IBM",
-                date: "August 2023",
-                id: "IBM-PDS-2023-002",
-                description: "Mastered Python programming for data analysis and visualization. This certificate demonstrates expertise in using Python libraries like Pandas, NumPy, and Matplotlib for data manipulation and visualization.",
-                image: "shivan.jpg",
-                downloadLink: "#",
-                verifyLink: "#"
-            },
-            3: {
-                name: "Database Management",
-                issuer: "Oracle",
-                date: "October 2023",
-                id: "ORC-DB-2023-003",
-                description: "Learned SQL fundamentals and database design principles. This certificate validates skills in database normalization, SQL queries, and database administration concepts.",
-                image: "shivan.jpg",
-                downloadLink: "#",
-                verifyLink: "#"
-            },
-            4: {
-                name: "JavaScript Algorithms",
-                issuer: "freeCodeCamp",
-                date: "December 2023",
-                id: "FCC-JS-2023-004",
-                description: "Completed 300+ hours of JavaScript algorithm challenges. This certificate demonstrates proficiency in JavaScript programming, data structures, and algorithm implementation.",
-                image: "shivan.jpg",
-                downloadLink: "#",
-                verifyLink: "#"
-            },
-            5: {
-                name: "React Development",
-                issuer: "Meta",
-                date: "February 2024",
-                id: "META-RCT-2024-005",
-                description: "Built interactive UIs with React and modern frontend tools. This certificate validates skills in React components, state management, hooks, and modern frontend development practices.",
-                image: "shivan.jpg",
-                downloadLink: "#",
-                verifyLink: "#"
-            },
-            6: {
-                name: "Cloud Computing Basics",
-                issuer: "AWS",
-                date: "April 2024",
-                id: "AWS-CC-2024-006",
-                description: "Introduction to cloud services and deployment strategies. This certificate demonstrates understanding of cloud computing concepts, AWS services, and cloud deployment methodologies.",
-                image: "shivan.jpg",
-                downloadLink: "#",
-                verifyLink: "#"
-            }
-        };
-
-        // Open modal when certificate is clicked
-        document.querySelectorAll('.certificate-card').forEach(card => {
-            card.addEventListener('click', function() {
-                const certificateId = this.getAttribute('data-certificate');
-                const certificate = certificates[certificateId];
-                
-                if (certificate) {
-                    modalCertificateImage.src = certificate.image;
-                    modalCertificateName.textContent = certificate.name;
-                    modalCertificateIssuer.textContent = certificate.issuer;
-                    modalCertificateDate.textContent = certificate.date;
-                    modalCertificateId.textContent = certificate.id;
-                    modalCertificateDescription.textContent = certificate.description;
-                    
-                    // Set download and verify links
-                    downloadCertificateBtn.onclick = function() {
-                        window.open(certificate.downloadLink, '_blank');
-                    };
-                    
-                    verifyCertificateBtn.onclick = function() {
-                        window.open(certificate.verifyLink, '_blank');
-                    };
-                    
-                    certificateModal.classList.add('active');
-                    document.body.style.overflow = 'hidden'; // Prevent scrolling
-                }
-            });
-        });
-
-        // Close modal
-        closeModal.addEventListener('click', function() {
-            certificateModal.classList.remove('active');
-            document.body.style.overflow = 'auto'; // Re-enable scrolling
-        });
-
-        // Close modal when clicking outside
-        certificateModal.addEventListener('click', function(e) {
-            if (e.target === certificateModal) {
-                certificateModal.classList.remove('active');
-                document.body.style.overflow = 'auto'; // Re-enable scrolling
-            }
-        });
-
-        // Close modal with Escape key
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape' && certificateModal.classList.contains('active')) {
-                certificateModal.classList.remove('active');
-                document.body.style.overflow = 'auto'; // Re-enable scrolling
-            }
-        });
     </script>
 </body>
+
 </html>
