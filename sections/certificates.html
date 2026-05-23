@@ -1,0 +1,138 @@
+<!-- sections/certificates.html -->
+<div class="certificates-wrapper">
+    <div class="certificates-header">
+        <h3 class="section-subtitle">Continuous Learning</h3>
+        <p class="section-description">Professional certifications that validate my expertise.</p>
+    </div>
+    
+    <div class="marquee-container">
+        <div class="marquee-track" id="certificatesTrack">
+            <div class="certificate-card" onclick="showCertificate(1)">
+                <div class="certificate-icon"><i class="fas fa-code"></i></div>
+                <h3 class="certificate-title">Web Development Fundamentals</h3>
+                <p class="certificate-issuer">Coursera</p>
+                <p class="certificate-date">June 2023</p>
+                <div class="certificate-tags"><span>HTML5</span><span>CSS3</span><span>JavaScript</span></div>
+                <button class="view-certificate-btn">View Certificate <i class="fas fa-arrow-right"></i></button>
+            </div>
+            
+            <div class="certificate-card" onclick="showCertificate(2)">
+                <div class="certificate-icon"><i class="fab fa-python"></i></div>
+                <h3 class="certificate-title">Python for Data Science</h3>
+                <p class="certificate-issuer">IBM</p>
+                <p class="certificate-date">August 2023</p>
+                <div class="certificate-tags"><span>Python</span><span>Pandas</span><span>NumPy</span></div>
+                <button class="view-certificate-btn">View Certificate <i class="fas fa-arrow-right"></i></button>
+            </div>
+            
+            <div class="certificate-card" onclick="showCertificate(3)">
+                <div class="certificate-icon"><i class="fas fa-database"></i></div>
+                <h3 class="certificate-title">Database Management</h3>
+                <p class="certificate-issuer">Oracle</p>
+                <p class="certificate-date">October 2023</p>
+                <div class="certificate-tags"><span>SQL</span><span>MySQL</span><span>Database Design</span></div>
+                <button class="view-certificate-btn">View Certificate <i class="fas fa-arrow-right"></i></button>
+            </div>
+            
+            <div class="certificate-card" onclick="showCertificate(4)">
+                <div class="certificate-icon"><i class="fab fa-js"></i></div>
+                <h3 class="certificate-title">JavaScript Algorithms</h3>
+                <p class="certificate-issuer">freeCodeCamp</p>
+                <p class="certificate-date">December 2023</p>
+                <div class="certificate-tags"><span>JavaScript</span><span>Algorithms</span><span>DSA</span></div>
+                <button class="view-certificate-btn">View Certificate <i class="fas fa-arrow-right"></i></button>
+            </div>
+            
+            <div class="certificate-card" onclick="showCertificate(5)">
+                <div class="certificate-icon"><i class="fab fa-react"></i></div>
+                <h3 class="certificate-title">React Development</h3>
+                <p class="certificate-issuer">Meta</p>
+                <p class="certificate-date">February 2024</p>
+                <div class="certificate-tags"><span>React</span><span>Hooks</span><span>Frontend</span></div>
+                <button class="view-certificate-btn">View Certificate <i class="fas fa-arrow-right"></i></button>
+            </div>
+            
+            <div class="certificate-card" onclick="showCertificate(6)">
+                <div class="certificate-icon"><i class="fas fa-cloud"></i></div>
+                <h3 class="certificate-title">Cloud Computing Basics</h3>
+                <p class="certificate-issuer">AWS</p>
+                <p class="certificate-date">April 2024</p>
+                <div class="certificate-tags"><span>AWS</span><span>Cloud</span><span>Deployment</span></div>
+                <button class="view-certificate-btn">View Certificate <i class="fas fa-arrow-right"></i></button>
+            </div>
+            
+            <div class="certificate-card" onclick="showCertificate(7)">
+                <div class="certificate-icon"><i class="fas fa-robot"></i></div>
+                <h3 class="certificate-title">GenAI Academy</h3>
+                <p class="certificate-issuer">Hack2Skill</p>
+                <p class="certificate-date">January 2025</p>
+                <div class="certificate-tags"><span>Generative AI</span><span>LLMs</span><span>Prompt Engineering</span></div>
+                <button class="view-certificate-btn">View Certificate <i class="fas fa-arrow-right"></i></button>
+            </div>
+            
+            <div class="certificate-card" onclick="showCertificate(8)">
+                <div class="certificate-icon"><i class="fas fa-chart-line"></i></div>
+                <h3 class="certificate-title">BCG Data Science Simulation</h3>
+                <p class="certificate-issuer">BCG / Forage</p>
+                <p class="certificate-date">March 2025</p>
+                <div class="certificate-tags"><span>Data Science</span><span>EDA</span><span>Predictive Modeling</span></div>
+                <button class="view-certificate-btn">View Certificate <i class="fas fa-arrow-right"></i></button>
+            </div>
+            
+            <!-- Duplicates for scroll -->
+            <div class="certificate-card clone" onclick="showCertificate(1)"><div class="certificate-icon"><i class="fas fa-code"></i></div><h3 class="certificate-title">Web Development Fundamentals</h3><p class="certificate-issuer">Coursera</p><p class="certificate-date">June 2023</p><div class="certificate-tags"><span>HTML5</span><span>CSS3</span><span>JavaScript</span></div><button class="view-certificate-btn">View Certificate <i class="fas fa-arrow-right"></i></button></div>
+            <div class="certificate-card clone" onclick="showCertificate(2)"><div class="certificate-icon"><i class="fab fa-python"></i></div><h3 class="certificate-title">Python for Data Science</h3><p class="certificate-issuer">IBM</p><p class="certificate-date">August 2023</p><div class="certificate-tags"><span>Python</span><span>Pandas</span><span>NumPy</span></div><button class="view-certificate-btn">View Certificate <i class="fas fa-arrow-right"></i></button></div>
+            <div class="certificate-card clone" onclick="showCertificate(3)"><div class="certificate-icon"><i class="fas fa-database"></i></div><h3 class="certificate-title">Database Management</h3><p class="certificate-issuer">Oracle</p><p class="certificate-date">October 2023</p><div class="certificate-tags"><span>SQL</span><span>MySQL</span><span>Database Design</span></div><button class="view-certificate-btn">View Certificate <i class="fas fa-arrow-right"></i></button></div>
+            <div class="certificate-card clone" onclick="showCertificate(4)"><div class="certificate-icon"><i class="fab fa-js"></i></div><h3 class="certificate-title">JavaScript Algorithms</h3><p class="certificate-issuer">freeCodeCamp</p><p class="certificate-date">December 2023</p><div class="certificate-tags"><span>JavaScript</span><span>Algorithms</span><span>DSA</span></div><button class="view-certificate-btn">View Certificate <i class="fas fa-arrow-right"></i></button></div>
+        </div>
+    </div>
+    
+    <div class="marquee-controls">
+        <button id="toggleMarqueeBtn" class="marquee-control-btn"><i class="fas fa-pause"></i> Pause Scroll</button>
+    </div>
+</div>
+
+<style>
+    .certificates-wrapper { width: 100%; overflow: hidden; }
+    .certificates-header { text-align: center; margin-bottom: 40px; }
+    .section-subtitle { font-size: 1rem; color: var(--accent-color); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 10px; }
+    .section-description { font-size: 0.95rem; color: var(--text-secondary); max-width: 600px; margin: 0 auto; }
+    .marquee-container { width: 100%; overflow: hidden; padding: 20px 0; }
+    .marquee-track { display: flex; gap: 25px; animation: scrollCertificates 35s linear infinite; width: fit-content; }
+    .marquee-container:hover .marquee-track { animation-play-state: paused; }
+    @keyframes scrollCertificates { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+    .certificate-card { flex: 0 0 auto; width: 290px; background: var(--card-bg); border-radius: 16px; padding: 20px; border: 1px solid var(--border-color); cursor: pointer; transition: 0.3s; position: relative; }
+    .certificate-card::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 3px; background: var(--accent-color); border-radius: 16px 16px 0 0; }
+    .certificate-card:hover { transform: translateY(-5px); border-color: var(--accent-color); }
+    .certificate-icon { font-size: 2rem; margin-bottom: 12px; color: var(--accent-color); }
+    .certificate-title { font-size: 1rem; margin-bottom: 5px; }
+    .certificate-issuer { font-size: 0.8rem; color: var(--accent-color); }
+    .certificate-date { font-size: 0.7rem; color: var(--text-secondary); margin-bottom: 10px; }
+    .certificate-tags { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 12px; }
+    .certificate-tags span { background: rgba(255,255,255,0.08); padding: 2px 8px; border-radius: 12px; font-size: 0.6rem; }
+    .view-certificate-btn { background: transparent; border: none; color: var(--accent-color); cursor: pointer; display: flex; align-items: center; gap: 5px; font-size: 0.8rem; }
+    .marquee-controls { text-align: center; margin-top: 20px; }
+    .marquee-control-btn { background: var(--accent-color); color: var(--bg-primary); border: none; padding: 8px 20px; border-radius: 25px; cursor: pointer; }
+    .clone { opacity: 0.7; }
+    @media (max-width: 768px) { .certificate-card { width: 250px; } }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const track = document.getElementById('certificatesTrack');
+        const toggleBtn = document.getElementById('toggleMarqueeBtn');
+        let isPaused = false;
+        if (toggleBtn) {
+            toggleBtn.addEventListener('click', function() {
+                if (isPaused) {
+                    track.style.animationPlayState = 'running';
+                    toggleBtn.innerHTML = '<i class="fas fa-pause"></i> Pause Scroll';
+                } else {
+                    track.style.animationPlayState = 'paused';
+                    toggleBtn.innerHTML = '<i class="fas fa-play"></i> Play Scroll';
+                }
+                isPaused = !isPaused;
+            });
+        }
+    });
+</script>

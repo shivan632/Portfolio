@@ -1,0 +1,117 @@
+<!-- sections/about.html -->
+<!-- About Me Section - Image Left, Content Right -->
+
+<div class="about-section">
+    <div class="about-content">
+        <div class="about-image animate">
+            <img src="assets/images/profile/shivan.jpg" alt="Shivan Mishra - Profile Photo">
+        </div>
+        
+        <div class="about-text animate">
+            <p>My name is Shivan Mishra, and I am a highly motivated BCA graduate with a strong academic background and a <strong>CGPA of 8.71</strong>. I have completed IBM-certified training in Artificial Intelligence and developed expertise in AI/ML, Data Science, and Frontend Development through academic projects and internships.</p>
+            
+            <p>During my BCA journey, I gained practical experience in data manipulation, machine learning model development, and predictive analytics. I have worked on AI/ML and backend projects that strengthened my problem-solving, analytical, and technical skills. My academic curriculum covered important subjects such as Data Structures & Algorithms (DSA), Design & Analysis of Algorithms (DAA), Computer Networking, Operating Systems, Artificial Intelligence, Machine Learning, and Data Visualization.</p>
+            
+            <p>I am also an active participant in hackathons and campus events, where I developed teamwork, leadership, and innovation skills. I am passionate about building impactful technology solutions and continuously learning emerging technologies in the field of AI and software development.</p>
+            
+            <p>Beyond academics, I'm actively developing my skills in <strong>React</strong>, <strong>MongoDB</strong>, and <strong>Node.js</strong>, working on full-stack projects to grow as a developer.</p>
+            
+            <p>When I'm not studying or working on projects, I enjoy exploring new technologies, improving my development skills, and staying curious about the latest trends in IT and software development.</p>
+        </div>
+    </div>
+</div>
+
+<style>
+    /* About Section Styles */
+    .about-section {
+        width: 100%;
+    }
+    
+    .about-content {
+        display: grid;
+        grid-template-columns: 0.8fr 1.2fr;
+        gap: 60px;
+        align-items: start;
+    }
+    
+    .about-image {
+        position: relative;
+    }
+    
+    .about-image img {
+        width: 100%;
+        height: 550px;
+        max-width: 400px;
+        border-radius: 20px;
+        border: 2px solid var(--border-color);
+        transition: var(--transition);
+    }
+    
+    .about-image img:hover {
+        transform: translateY(-5px);
+        border-color: var(--accent-color);
+    }
+    
+    .about-text p {
+        color: var(--text-secondary);
+        margin-bottom: 20px;
+        line-height: 1.8;
+        font-size: 1rem;
+    }
+    
+    .about-text strong {
+        color: var(--accent-color);
+        font-weight: 600;
+    }
+    
+    /* Animation */
+    .animate {
+        opacity: 0;
+        transform: translateY(30px);
+        animation: fadeInUp 0.8s ease-out forwards;
+    }
+    
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    /* Responsive */
+    @media (max-width: 992px) {
+        .about-content {
+            grid-template-columns: 1fr;
+            text-align: center;
+            gap: 40px;
+        }
+        
+        .about-image {
+            max-width: 280px;
+            margin: 0 auto;
+        }
+        
+        .about-text {
+            text-align: center;
+        }
+    }
+    
+    @media (max-width: 576px) {
+        .about-content {
+            gap: 30px;
+        }
+        
+        .about-image img {
+            max-width: 220px;
+        }
+        
+        .about-text p {
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+    }
+</style>

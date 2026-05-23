@@ -1,1 +1,251 @@
+# ============================================
+# IMAGES - Ignore all image files
+# ============================================
+
+# All image formats
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.svg
+*.ico
+*.webp
+*.bmp
+*.tiff
+*.psd
+*.ai
+*.eps
+
+# Images in specific folders
+assets/images/
+assets/img/
+images/
+img/
+
+# Project screenshots
+project*.png
+project*.jpg
+Project*.jpeg
+Project*.png
+screenshot*.png
+screenshot*.jpg
+
+# ============================================
+# OS generated files
+# ============================================
+
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# ============================================
+# IDE / Editor files
+# ============================================
+
+# VSCode
+.vscode/
+.vscode/settings.json
+.vscode/tasks.json
+.vscode/launch.json
+.vscode/extensions.json
+*.code-workspace
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Atom
+.atom/
+.config/
+
+# JetBrains (WebStorm, IntelliJ)
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Vim
+*.swp
+*.swo
+*~
+.vim/
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# ============================================
+# Dependency directories
+# ============================================
+
+node_modules/
+jspm_packages/
+bower_components/
+
+# ============================================
+# Build outputs
+# ============================================
+
+/dist/
+/build/
+/out/
+/output/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# ============================================
+# Environment files
+# ============================================
+
 .env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env*.local
+
+# ============================================
+# Package manager files
+# ============================================
+
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# ============================================
+# Testing
+# ============================================
+
+/coverage/
+.nyc_output/
+*.test.js
+*.spec.js
+__tests__/
+
+# ============================================
+# Temporary files
+# ============================================
+
+*.tmp
+*.temp
+*.cache
+*.bak
+*.backup
+*.old
+*.orig
+
+# ============================================
+# Logs
+# ============================================
+
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pm2-*.log
+
+# ============================================
+# Runtime data
+# ============================================
+
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# ============================================
+# Coverage directory used by tools like istanbul
+# ============================================
+
+coverage/
+.nyc_output/
+
+# ============================================
+# Optional: Keep example images (uncomment if needed)
+# ============================================
+
+# !example.png
+# !placeholder.jpg
+# !assets/images/placeholder/*
+
+# ============================================
+# Vercel deployment files
+# ============================================
+
+.vercel/
+vercel.json
+
+# ============================================
+# Archive files
+# ============================================
+
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# ============================================
+# Certificate files (if any)
+# ============================================
+
+*.pem
+*.crt
+*.key
+
+# ============================================
+# Database files
+# ============================================
+
+*.db
+*.sqlite
+*.sqlite3
+
+# ============================================
+# Documentation
+# ============================================
+
+docs/_build/
+site/
+
+# ============================================
+# Python (if any backend files)
+# ============================================
+
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.pytest_cache/
+
+# ============================================
+# Keep necessary files (README, HTML, CSS, JS)
+# ============================================
+
+!index.html
+!*.css
+!*.js
+!*.json
+!README.md
+!.gitignore
