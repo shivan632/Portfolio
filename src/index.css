@@ -1,0 +1,781 @@
+/* Import Bootstrap first so Tailwind can override its classes if needed */
+@import "bootstrap/dist/css/bootstrap.min.css";
+
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-brand-glow: #10b981;
+  --color-brand-accent: #6366f1;
+  --color-brand-dark: #0b0f19;
+  --color-brand-cardDark: #161e2e;
+  --color-brand-cardLight: #ffffff;
+
+  --animate-glow-pulse: glow 3s infinite alternate;
+  --animate-float-slow: float 6s ease-in-out infinite;
+
+  @keyframes glow {
+    0% { box-shadow: 0 0 5px rgba(16, 185, 129, 0.4); }
+    100% { box-shadow: 0 0 20px rgba(99, 102, 241, 0.6); }
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+  }
+}
+
+
+/* Custom scrollbar and root settings */
+html {
+  scroll-behavior: smooth;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1), color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Premium Obsidian Dark background with soft blended meshes */
+.dark-theme-bg {
+  background-color: #070a13;
+  background-image: 
+    radial-gradient(at 15% 15%, rgba(99, 102, 241, 0.07) 0px, transparent 45%),
+    radial-gradient(at 85% 15%, rgba(16, 185, 129, 0.06) 0px, transparent 45%),
+    radial-gradient(at 50% 85%, rgba(139, 92, 246, 0.04) 0px, transparent 50%);
+  color: #e2e8f0;
+}
+
+/* Elegant Slate Light background with soft cool meshes */
+.light-theme-bg {
+  background-color: #f8fafc;
+  background-image: 
+    radial-gradient(at 15% 15%, rgba(99, 102, 241, 0.03) 0px, transparent 45%),
+    radial-gradient(at 85% 15%, rgba(16, 185, 129, 0.03) 0px, transparent 45%);
+  color: #1e293b;
+}
+
+/* Micro Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: #070a13;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 999px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #1f293d;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* Ultra Glassmorphism */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.dark .glass-panel {
+  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+/* Glowing typography & shapes */
+.text-brand-gradient {
+  background: linear-gradient(90deg, #10b981, #6366f1);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  display: inline-block;
+}
+
+.bg-brand-gradient {
+  background: linear-gradient(90deg, #10b981, #6366f1) !important;
+}
+
+/* Custom color classes for bulletproof v4 compiler fallback */
+.text-brand-glow {
+  color: #10b981 !important;
+}
+.text-brand-accent {
+  color: #6366f1 !important;
+}
+.bg-brand-glow {
+  background-color: #10b981 !important;
+}
+.bg-brand-accent {
+  background-color: #6366f1 !important;
+}
+.border-brand-glow {
+  border-color: #10b981 !important;
+}
+.border-brand-accent {
+  border-color: #6366f1 !important;
+}
+.bg-brand-cardDark {
+  background-color: #161e2e !important;
+}
+
+
+.text-neon-emerald {
+  color: #10b981;
+  text-shadow: 0 0 12px rgba(16, 185, 129, 0.3);
+}
+
+.text-neon-indigo {
+  color: #6366f1;
+  text-shadow: 0 0 12px rgba(99, 102, 241, 0.3);
+}
+
+/* Premium Card hover lifts */
+.glow-card {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px -1px rgba(0, 0, 0, 0.01);
+}
+
+.glow-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 25px -5px rgba(99, 102, 241, 0.05), 0 10px 10px -5px rgba(16, 185, 129, 0.05);
+}
+
+.dark .glow-card:hover {
+  box-shadow: 0 20px 30px -5px rgba(99, 102, 241, 0.15), 0 10px 15px -5px rgba(16, 185, 129, 0.1);
+  border-color: rgba(99, 102, 241, 0.15) !important;
+}
+
+/* Custom form fields focusing style */
+.custom-input {
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: rgba(248, 250, 252, 0.7);
+}
+
+.dark .custom-input {
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  background-color: rgba(15, 23, 42, 0.4);
+}
+
+.custom-input:focus {
+  background-color: #fff;
+  border-color: #10b981 !important;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.15) !important;
+}
+
+.dark .custom-input:focus {
+  background-color: rgba(15, 23, 42, 0.8);
+  border-color: #6366f1 !important;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2) !important;
+}
+
+/* Navbar item line transition */
+.navbar-indicator-link {
+  position: relative;
+}
+
+.navbar-indicator-link::after {
+  content: '';
+  position: absolute;
+  bottom: 2px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #10b981, #6366f1);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.navbar-indicator-link:hover::after {
+  width: 60%;
+}
+
+/* Premium Overrides for Bootstrap elements */
+.navbar-toggler:focus {
+  box-shadow: none !important;
+}
+
+.modal-content {
+  background: transparent !important;
+  border: none !important;
+}
+
+.carousel-indicators [data-bs-target] {
+  background-color: #6366f1 !important;
+  width: 10px !important;
+  height: 10px !important;
+  border-radius: 50% !important;
+  margin: 0 6px !important;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(40%) sepia(80%) saturate(1000%) hue-rotate(220deg);
+}
+
+.dark .carousel-control-prev-icon,
+.dark .carousel-control-next-icon {
+  filter: invert(80%) sepia(20%) saturate(800%) hue-rotate(180deg);
+}
+
+/* Timeline Custom Styles */
+.timeline-item::after {
+  content: '';
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #10b981, #6366f1);
+  border: 3px solid #fff;
+  top: 6px;
+  left: -7px;
+  z-index: 1;
+  box-shadow: 0 0 8px rgba(99, 102, 241, 0.4);
+  transition: all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.timeline-item:hover::after {
+  transform: scale(1.3);
+  box-shadow: 0 0 14px rgba(16, 185, 129, 0.8), 0 0 14px rgba(99, 102, 241, 0.8);
+}
+
+.dark .timeline-item::after {
+  border-color: #070a13;
+}
+
+.timeline-item {
+  border-left: 2px solid rgba(226, 232, 240, 0.8);
+  padding-left: 24px;
+  position: relative;
+  transition: border-color 0.3s;
+}
+
+.timeline-item:hover {
+  border-left-color: #10b981;
+}
+
+.dark .timeline-item {
+  border-left-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Page entrance animations */
+.section-fade-in {
+  opacity: 0;
+  transform: translateY(16px);
+  animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Project Filter Buttons custom styling for perfect theme contrast */
+.project-filter-btn {
+  color: #475569 !important; /* slate-600 */
+}
+
+.dark .project-filter-btn {
+  color: #cbd5e1 !important; /* slate-300 */
+}
+
+.project-filter-btn.active {
+  color: #ffffff !important;
+}
+
+/* ========== Scroll Progress Bar ========== */
+.scroll-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #10b981, #6366f1, #8b5cf6);
+  transform-origin: 0%;
+  z-index: 9999;
+}
+
+/* ========== AI Chatbot Styles (Premium Redesign) ========== */
+.chatbot-bubble {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 9998;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: linear-gradient(135deg, #10b981, #6366f1);
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 30px -5px rgba(99, 102, 241, 0.4),
+              0 5px 15px -3px rgba(16, 185, 129, 0.3),
+              inset 0 2px 4px rgba(255, 255, 255, 0.2);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.chatbot-bubble:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 20px 40px -5px rgba(99, 102, 241, 0.5),
+              0 8px 20px -3px rgba(16, 185, 129, 0.4),
+              inset 0 2px 4px rgba(255, 255, 255, 0.3);
+}
+
+.chatbot-bubble-pulse {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #10b981, #6366f1);
+  animation: chatPulse 2.4s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+  pointer-events: none;
+}
+
+@keyframes chatPulse {
+  0% { transform: scale(0.95); opacity: 0.5; }
+  100% { transform: scale(1.6); opacity: 0; }
+}
+
+.chatbot-panel {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 9998;
+  width: 390px;
+  max-height: 600px;
+  border-radius: 28px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 30px 70px -15px rgba(15, 23, 42, 0.12),
+              0 15px 30px -10px rgba(99, 102, 241, 0.08),
+              inset 0 1px 1px rgba(255, 255, 255, 0.4);
+  transition: all 0.3s ease;
+}
+
+.dark .chatbot-panel {
+  background: rgba(11, 15, 25, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 30px 70px -15px rgba(0, 0, 0, 0.4),
+              0 15px 30px -10px rgba(99, 102, 241, 0.15),
+              inset 0 1px 0px rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 480px) {
+  .chatbot-panel {
+    width: calc(100vw - 24px);
+    right: 12px;
+    bottom: 12px;
+    max-height: calc(100vh - 80px);
+    border-radius: 24px;
+  }
+}
+
+.chatbot-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 22px;
+  border-bottom: 1px solid rgba(226, 232, 240, 0.5);
+  background: linear-gradient(135deg, rgba(248, 250, 252, 0.8), rgba(255, 255, 255, 0.4));
+}
+
+.dark .chatbot-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.8), rgba(11, 15, 25, 0.4));
+}
+
+.chatbot-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #10b981, #6366f1);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.2);
+}
+
+.chatbot-online-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #10b981;
+  box-shadow: 0 0 8px #10b981;
+  animation: onlinePulse 2s ease-in-out infinite;
+}
+
+@keyframes onlinePulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.2); opacity: 0.5; }
+}
+
+.chatbot-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-height: 400px;
+  min-height: 250px;
+}
+
+.chatbot-msg {
+  display: flex;
+  gap: 10px;
+  align-items: flex-end;
+}
+
+.chatbot-msg-user {
+  flex-direction: row-reverse;
+}
+
+.chatbot-msg-avatar {
+  width: 26px;
+  height: 26px;
+  min-width: 26px;
+  border-radius: 9px;
+  background: linear-gradient(135deg, #10b981, #6366f1);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2px;
+  box-shadow: 0 2px 6px rgba(99, 102, 241, 0.15);
+}
+
+.chatbot-msg-bubble {
+  padding: 12px 16px;
+  border-radius: 20px;
+  font-size: 13.5px;
+  line-height: 1.6;
+  max-width: 82%;
+  word-break: break-word;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.01);
+}
+
+.chatbot-msg-bubble-ai {
+  background: rgba(248, 250, 252, 0.6);
+  color: #334155;
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  border-bottom-left-radius: 4px;
+}
+
+.dark .chatbot-msg-bubble-ai {
+  background: rgba(30, 41, 59, 0.4);
+  color: #cbd5e1;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.chatbot-msg-bubble-user {
+  background: linear-gradient(135deg, #10b981, #6366f1);
+  color: #fff;
+  border-bottom-right-radius: 4px;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.15);
+}
+
+/* Premium styling for list formatting in responses */
+.chatbot-msg-bubble-ai span.chatbot-list-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  padding-left: 4px;
+}
+
+.chatbot-msg-bubble-ai span.chatbot-list-item::before {
+  content: "✦";
+  color: #10b981;
+  font-size: 12px;
+  line-height: 1.6;
+  flex-shrink: 0;
+}
+
+.dark .chatbot-msg-bubble-ai span.chatbot-list-item::before {
+  color: #6366f1;
+}
+
+.chatbot-msg-bubble-ai strong {
+  color: #0f172a;
+}
+
+.dark .chatbot-msg-bubble-ai strong {
+  color: #f8fafc;
+}
+
+/* Typing Indicator */
+.chatbot-typing {
+  display: flex;
+  gap: 5px;
+  padding: 6px 4px;
+  align-items: center;
+}
+
+.chatbot-typing span {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #10b981;
+  opacity: 0.7;
+  animation: typingBounce 1.4s ease-in-out infinite;
+}
+
+.chatbot-typing span:nth-child(2) { animation-delay: 0.15s; background: #6366f1; }
+.chatbot-typing span:nth-child(3) { animation-delay: 0.3s; background: #8b5cf6; }
+
+@keyframes typingBounce {
+  0%, 60%, 100% { transform: translateY(0); }
+  30% { transform: translateY(-7px); }
+}
+
+/* Suggested Questions */
+.chatbot-suggestions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-left: 36px;
+  margin-top: 4px;
+}
+
+.chatbot-suggestion-btn {
+  padding: 10px 16px;
+  border-radius: 16px;
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  background: rgba(255, 255, 255, 0.4);
+  color: #475569;
+  font-size: 12px;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dark .chatbot-suggestion-btn {
+  border-color: rgba(255, 255, 255, 0.05);
+  background: rgba(30, 41, 59, 0.2);
+  color: #94a3b8;
+}
+
+.chatbot-suggestion-btn:hover {
+  border-color: #10b981;
+  color: #10b981;
+  background: rgba(16, 185, 129, 0.05);
+  transform: translateX(4px);
+}
+
+.dark .chatbot-suggestion-btn:hover {
+  border-color: #6366f1;
+  color: #6366f1;
+  background: rgba(99, 102, 241, 0.05);
+}
+
+/* Input Bar */
+.chatbot-input-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 20px;
+  border-top: 1px solid rgba(226, 232, 240, 0.5);
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.dark .chatbot-input-bar {
+  border-top: 1px solid rgba(255, 255, 255, 0.03);
+  background: rgba(11, 15, 25, 0.4);
+}
+
+.chatbot-input {
+  flex: 1;
+  padding: 12px 16px;
+  border-radius: 16px;
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  background: rgba(255, 255, 255, 0.6);
+  color: #1e293b;
+  font-size: 13px;
+  outline: none;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dark .chatbot-input {
+  border-color: rgba(255, 255, 255, 0.05);
+  background: rgba(30, 41, 59, 0.4);
+  color: #e2e8f0;
+}
+
+.chatbot-input:focus {
+  border-color: #10b981;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+}
+
+.dark .chatbot-input:focus {
+  border-color: #6366f1;
+  background: rgba(30, 41, 59, 0.7);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+}
+
+.chatbot-input::placeholder {
+  color: #94a3b8;
+}
+
+.chatbot-send-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  border: none;
+  background: linear-gradient(135deg, #10b981, #6366f1);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.15);
+}
+
+.chatbot-send-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(99, 102, 241, 0.25);
+}
+
+
+.chatbot-send-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* ========== Back to Top Button ========== */
+.back-to-top-btn {
+  position: fixed;
+  bottom: 100px;
+  right: 30px;
+  z-index: 9990;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid rgba(226, 232, 240, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.back-to-top-btn.light-btn {
+  background: rgba(255, 255, 255, 0.7);
+  color: #475569;
+}
+
+.back-to-top-btn.dark-btn {
+  background: rgba(15, 23, 42, 0.7);
+  border-color: rgba(255, 255, 255, 0.06);
+  color: #94a3b8;
+}
+
+.back-to-top-btn:hover {
+  transform: translateY(-3px);
+  color: #10b981;
+  border-color: #10b981;
+}
+
+/* ========== Scroll indicator bounce ========== */
+@keyframes scrollBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(8px); }
+}
+
+.scroll-down-indicator {
+  animation: scrollBounce 2s ease-in-out infinite;
+}
+
+/* ========== Dark Theme Card & Modal Text Overrides (Fix Contrast issues) ========== */
+.dark .card.glass-panel {
+  background: rgba(15, 23, 42, 0.65) !important;
+  border-color: rgba(255, 255, 255, 0.03) !important;
+}
+
+.dark .card.glass-panel .card-title {
+  color: #ffffff !important;
+}
+
+.dark .card.glass-panel .card-text {
+  color: #cbd5e1 !important;
+}
+
+.dark .card.glass-panel .text-brand-accent {
+  color: #a5b4fc !important;
+}
+
+.dark .card.glass-panel .bg-slate-100 {
+  background-color: rgba(15, 23, 42, 0.6) !important;
+  color: #cbd5e1 !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Modal text overrides in dark theme */
+.dark .custom-project-modal .modal-content h3 {
+  color: #ffffff !important;
+}
+
+.dark .custom-project-modal .modal-content h4 {
+  color: #cbd5e1 !important;
+}
+
+.dark .custom-project-modal .modal-content p {
+  color: #cbd5e1 !important;
+}
+
+.dark .custom-project-modal .modal-content .text-slate-600,
+.dark .custom-project-modal .modal-content .text-slate-700,
+.dark .custom-project-modal .modal-content .text-slate-800,
+.dark .custom-project-modal .modal-content .text-slate-900 {
+  color: #ffffff !important;
+}
+
+.dark .custom-project-modal .modal-content .dark\:text-slate-300 {
+  color: #cbd5e1 !important;
+}
+
+.dark .custom-project-modal .modal-content .bg-brand-cardLight {
+  background-color: #161e2e !important;
+}
