@@ -1,3 +1,20 @@
+import flashnotesImg from "../assets/project_img/flashnotes.png";
+import quickdocImg from "../assets/project_img/quickdoc.png";
+import brainImg from "../assets/project_img/brain.jpeg";
+import fishImg from "../assets/project_img/fish.png";
+import uniselectorImg from "../assets/project_img/uniselector.png";
+import adventureImg from "../assets/project_img/adventure.png";
+import foodImg from "../assets/project_img/food.png";
+import aniflixImg from "../assets/project_img/aniflix.png";
+
+import nodeCert from "../assets/certificate/node.jpg";
+import dsCert from "../assets/certificate/data-science.png";
+import pythonCert from "../assets/certificate/p-python.png";
+import pdsCert from "../assets/certificate/p-data-science.png";
+import aiCert from "../assets/certificate/ai.png";
+import mlCert from "../assets/certificate/ml.png";
+import devfestCert from "../assets/certificate/devfest.png";
+
 export const portfolioData = {
   personalInfo: {
     name: "Shivan Mishra",
@@ -77,7 +94,7 @@ export const portfolioData = {
       tech: ["React", "Node.js", "Express", "SupaBase", "Tailwind CSS", "Bootstrap"],
       github: "https://github.com/shivan632/flashnotes-grp-pjt",
       vercel: "https://flashnotes-grp-pjt-1t3z.vercel.app/",
-      image: "src/assets/project_img/flashnotes.png"
+      image: flashnotesImg
     },
     {
       id: 2,
@@ -88,7 +105,7 @@ export const portfolioData = {
       tech: ["HTML5", "CSS3", "JavaScript", "Bootstrap", "Tailwind CSS"],
       github: "https://github.com/shivan632/QuickDocAI",
       vercel: "https://quick-doc-ai-rho.vercel.app/",
-      image: "src/assets/project_img/quickdoc.png"
+      image: quickdocImg
     },
     {
       id: 3,
@@ -98,7 +115,7 @@ export const portfolioData = {
       category: "Data Science",
       tech: ["Python", "TensorFlow & Keras", "Streamlit", "CNN"],
       github: "https://github.com/shivan632/Brain-Tumor-MRI-Classifierr",
-      image: "src/assets/project_img/brain.jpeg"
+      image: brainImg
     },
     {
       id: 4,
@@ -108,7 +125,7 @@ export const portfolioData = {
       category: "Data Science",
       tech: ["Python", "TensorFlow & Keras", "Streamlit", "CNN & ANN"],
       github: "https://github.com/shivan632/Fish-Classification",
-      image: "src/assets/project_img/fish.png"
+      image: fishImg
     },
     {
       id: 5,
@@ -119,7 +136,7 @@ export const portfolioData = {
       tech: ["HTML5", "CSS3", "JavaScript", "Bootstrap", "MySQL", "Node.js", "Express", "Tailwind CSS"],
       github: "https://github.com/shivan632/University-Selector",
       vercel: "https://university-selector.vercel.app/",
-      image: "src/assets/project_img/uniselector.png"
+      image: uniselectorImg
     },
     {
       id: 6,
@@ -130,7 +147,7 @@ export const portfolioData = {
       tech: ["HTML5", "CSS3", "JavaScript", "Bootstrap", "Tailwind CSS", "Three.js"],
       github: "https://github.com/shivan632/Advanture",
       vercel: "https://advanture-nu.vercel.app/",
-      image: "src/assets/project_img/adventure.png"
+      image: adventureImg
     },
     {
       id: 7,
@@ -141,7 +158,7 @@ export const portfolioData = {
       tech: ["HTML5", "CSS3", "JavaScript", "Bootstrap", "Tailwind CSS"],
       github: "https://github.com/shivan632/Project-Food-Website",
       vercel: "https://project-food-website.vercel.app/",
-      image: "src/assets/project_img/food.png"
+      image: foodImg
     },
     {
       id: 8,
@@ -152,7 +169,7 @@ export const portfolioData = {
       tech: ["HTLM5", "CSS3", "JavaScript", "Tailwind CSS", "Bootstrap", "Local Storage", "Iconify"],
       github: "https://github.com/shivan632/AniFlix",
       vercel: "https://ani-flix-two.vercel.app/",
-      image: "src/assets/project_img/aniflix.png"
+      image: aniflixImg
     }
   ],
 
@@ -163,7 +180,7 @@ export const portfolioData = {
       issuer: "UnStop",
       date: "July 2026",
       credentialUrl: "https://unstop.com/certificate-preview/70d30eb6-b606-4604-888f-371f3a334f37",
-      image: "src/assets/certificate/node.jpg"
+      image: nodeCert
     },
     {
       id: 2,
@@ -171,7 +188,7 @@ export const portfolioData = {
       issuer: "IBM",
       date: "June  2025",
       credentialUrl: "https://courses.uniteduniversity.skillsnetwork.site/certificates/e0a7da10ee254f6886bbfd7c6ddcf818",
-      image: "src/assets/certificate/data-science.png"
+      image: dsCert
     },
     {
       id: 3,
@@ -179,7 +196,7 @@ export const portfolioData = {
       issuer: "IBM",
       date: "May  2025",
       credentialUrl: "https://courses.ibmcep.cognitiveclass.ai/certificates/3173458ce3a14fe387d03a117a3915b7",
-      image: "src/assets/certificate/p-python.png"
+      image: pythonCert
     },
     {
       id: 4,
@@ -187,7 +204,7 @@ export const portfolioData = {
       issuer: "IBM",
       date: "May  2025",
       credentialUrl: "https://courses.ibmcep.cognitiveclass.ai/certificates/3173458ce3a14fe387d03a117a3915b7",
-      image: "src/assets/certificate/p-python.png"
+      image: pythonCert
     },
     {
       id: 5,
@@ -195,7 +212,7 @@ export const portfolioData = {
       issuer: "IBM",
       date: "October 2025",
       credentialUrl: "https://courses.uniteduniversity.skillsnetwork.site/certificates/7cf1a78ea95f4549938fb7d9a85e0abc",
-      image: "src/assets/certificate/p-data-science.png"
+      image: pdsCert
     },
     {
       id: 6,
@@ -203,7 +220,7 @@ export const portfolioData = {
       issuer: "IBM",
       date: "November 2025",
       credentialUrl: "https://courses.uniteduniversity.skillsnetwork.site/certificates/83a1b68efe294a5cab2a7063ff930220",
-      image: "src/assets/certificate/ai.png"
+      image: aiCert
     },
     {
       id: 7,
@@ -211,7 +228,7 @@ export const portfolioData = {
       issuer: "IBM",
       date: "September 2025",
       credentialUrl: "https://courses.uniteduniversity.skillsnetwork.site/certificates/6e5dc25bc32740f9912dc8b75ebda037",
-      image: "src/assets/certificate/ml.png"
+      image: mlCert
     },
     {
       id: 8,
@@ -219,7 +236,7 @@ export const portfolioData = {
       issuer: "Google",
       date: "November 2025",
       credentialUrl: "https://certificate.givemycertificate.com/c/e1032d34-985b-4bf4-945d-7b31807496f1",
-      image: "src/assets/certificate/devfest.png"
+      image: devfestCert
     }
   ],
 
