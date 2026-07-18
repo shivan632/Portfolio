@@ -6,10 +6,8 @@ import uniselectorImg from "../assets/project_img/uniselector.png";
 import adventureImg from "../assets/project_img/adventure.png";
 import foodImg from "../assets/project_img/food.png";
 import aniflixImg from "../assets/project_img/aniflix.png";
-<<<<<<< HEAD
 import sentiment from "../assets/project_img/sentiment.png";
-=======
->>>>>>> 1ce61077cf006b088ae03cdeee7a399734799a98
+
 
 import nodeCert from "../assets/certificate/node.jpg";
 import dsCert from "../assets/certificate/data-science.png";
@@ -167,7 +165,6 @@ export const portfolioData = {
     },
     {
       id: 8,
-<<<<<<< HEAD
       title: "Sentiment Analysis System",
       shortDescription: "Sentiment Analysis",
       longDescription: "Sentiment Analysis on Social Media is an AI-powered web application that analyzes the sentiment of user-provided social media text and classifies it as Positive, Negative, or Neutral. The application uses Natural Language Processing (NLP) and a trained machine learning model to preprocess text, extract meaningful features, and generate accurate sentiment predictions.",
@@ -179,8 +176,7 @@ export const portfolioData = {
     },
     {
       id: 9,
-=======
->>>>>>> 1ce61077cf006b088ae03cdeee7a399734799a98
+
       title: "AniFlix (OTT Platform)",
       shortDescription: "A platform where users can watch anime, series, and other shows.",
       longDescription: "A OTT platform where users can watch anime, series, and other shows. A full-featured online OTT platform with  listings, cart functionality, and secure checkout.",
