@@ -1,0 +1,122 @@
+{
+  "skills": {
+    "programming": [
+      {
+        "name": "Python",
+        "level": 90,
+        "icon": "fab fa-python",
+        "description": "Advanced"
+      },
+      {
+        "name": "JavaScript",
+        "level": 80,
+        "icon": "fab fa-js",
+        "description": "Intermediate"
+      },
+      {
+        "name": "Java",
+        "level": 75,
+        "icon": "fab fa-java",
+        "description": "Intermediate"
+      },
+      {
+        "name": "R Language",
+        "level": 70,
+        "icon": "fas fa-chart-line",
+        "description": "Intermediate"
+      },
+      {
+        "name": "C Language",
+        "level": 70,
+        "icon": "fas fa-code",
+        "description": "Intermediate"
+      }
+    ],
+    "web": [
+      {
+        "name": "HTML5",
+        "level": 90,
+        "icon": "fab fa-html5",
+        "description": "Advanced"
+      },
+      {
+        "name": "CSS3",
+        "level": 85,
+        "icon": "fab fa-css3-alt",
+        "description": "Advanced"
+      },
+      {
+        "name": "React.js",
+        "level": 60,
+        "icon": "fab fa-react",
+        "description": "Learning"
+      },
+      {
+        "name": "Node.js",
+        "level": 55,
+        "icon": "fab fa-node-js",
+        "description": "Learning"
+      },
+      {
+        "name": "MongoDB",
+        "level": 55,
+        "icon": "fas fa-database",
+        "description": "Learning"
+      }
+    ],
+    "competencies": [
+      {
+        "name": "Data Structures & Algorithms",
+        "rating": 4.5,
+        "icon": "fas fa-code-branch"
+      },
+      {
+        "name": "Data Analysis",
+        "rating": 4,
+        "icon": "fas fa-chart-pie"
+      },
+      {
+        "name": "Machine Learning",
+        "rating": 3.5,
+        "icon": "fas fa-robot"
+      },
+      {
+        "name": "Git & Version Control",
+        "rating": 4,
+        "icon": "fas fa-git-alt"
+      },
+      {
+        "name": "SQL",
+        "rating": 4,
+        "icon": "fas fa-database"
+      },
+      {
+        "name": "Computer Networking",
+        "rating": 3.5,
+        "icon": "fas fa-network-wired"
+      }
+    ],
+    "soft": [
+      {
+        "name": "Problem Solving",
+        "level": 88
+      },
+      {
+        "name": "Team Collaboration",
+        "level": 85
+      },
+      {
+        "name": "Communication",
+        "level": 80
+      },
+      {
+        "name": "Time Management",
+        "level": 85
+      },
+      {
+        "name": "Adaptability",
+        "level": 90
+      }
+    ]
+  }
+}

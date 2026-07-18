@@ -1,0 +1,27 @@
+{
+  "personal": {
+    "name": "Shivan Mishra",
+    "role": "Full Stack Developer",
+    "location": "Prayagraj, Uttar Pradesh, India",
+    "email": "shivrom.2020@gmail.com",
+    "phone": "+91-9935806722",
+    "github": "https://github.com/shivan632",
+    "linkedin": "https://www.linkedin.com/in/shivan-mishra-b7156a317/",
+    "twitter": "https://x.com/ShivanMish31063",
+    "instagram": "https://www.instagram.com/shivan4195/"
+  },
+  "bio": {
+    "intro": "I'm a passionate BCA student specializing in IBM technologies, currently in my 3rd year (5th semester) at United University, Prayagraj.",
+    "internship": "Alongside my academic journey, I'm gaining real-world experience through a paid internship at Labmentrix, where I'm contributing to live projects and expanding my skills in the tech industry.",
+    "coursework": "Through my coursework, I've built a strong foundation in Data Structures & Algorithms (DSA), Design & Analysis of Algorithms (DAA), Computer Networking, Operating Systems, and Digital Logic & Design, and I'm proficient in Python, R, C, Java, HTML, CSS, and JavaScript.",
+    "learning": "Beyond academics, I'm actively developing my skills in React, MongoDB, and Node.js, working on full-stack projects to grow as a developer.",
+    "interests": "When I'm not studying or working on projects, I enjoy exploring new technologies, improving my development skills, and staying curious about the latest trends in IT and software development."
+  },
+  "stats": [
+    { "number": "3rd", "label": "Year BCA" },
+    { "number": "8.61", "label": "CGPA" },
+    { "number": "7+", "label": "Projects" },
+    { "number": "6+", "label": "Certifications" }
+  ],
+  "resumeUrl": "assets/files/Shivan-Resume.pdf"
+}

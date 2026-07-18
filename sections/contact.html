@@ -1,0 +1,263 @@
+<!-- sections/contact.html -->
+<div class="contact-wrapper">
+    
+    <div class="contact-header">
+        <h3 class="section-subtitle">Get In Touch</h3>
+        <p class="section-description">Have a project in mind or want to discuss opportunities? I'd love to hear from you!</p>
+    </div>
+    
+    <div class="contact-grid">
+        
+        <!-- Left Side - Contact Information -->
+        <div class="contact-info-side">
+            <div class="contact-card">
+                <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                <div class="contact-detail">
+                    <h4>Location</h4>
+                    <p>Prayagraj, Uttar Pradesh, India</p>
+                    <span class="contact-sub">Available for remote opportunities worldwide</span>
+                </div>
+            </div>
+            
+            <div class="contact-card">
+                <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                <div class="contact-detail">
+                    <h4>Email</h4>
+                    <p><a href="mailto:shivrom.2020@gmail.com">shivrom.2020@gmail.com</a></p>
+                    <span class="contact-sub">Response within 24 hours</span>
+                </div>
+            </div>
+            
+            <div class="contact-card">
+                <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+                <div class="contact-detail">
+                    <h4>Phone</h4>
+                    <p><a href="tel:+919935806722">+91-9935806722</a></p>
+                    <span class="contact-sub">Mon-Fri, 10 AM - 6 PM IST</span>
+                </div>
+            </div>
+            
+            <div class="contact-card">
+                <div class="contact-icon"><i class="fas fa-clock"></i></div>
+                <div class="contact-detail">
+                    <h4>Best Time to Reach</h4>
+                    <p>Weekdays: 10:00 AM - 6:00 PM IST</p>
+                    <span class="contact-sub">Weekends: Flexible</span>
+                </div>
+            </div>
+            
+            <div class="social-connect">
+                <h4>Connect with me</h4>
+                <div class="social-links-group">
+                    <a href="https://github.com/shivan632" target="_blank" class="social-link"><i class="fab fa-github"></i><span>GitHub</span></a>
+                    <a href="https://www.linkedin.com/in/shivan-mishra-b7156a317/" target="_blank" class="social-link"><i class="fab fa-linkedin-in"></i><span>LinkedIn</span></a>
+                    <a href="https://x.com/ShivanMish31063" target="_blank" class="social-link"><i class="fab fa-twitter"></i><span>Twitter</span></a>
+                    <a href="https://www.instagram.com/shivan4195/" target="_blank" class="social-link"><i class="fab fa-instagram"></i><span>Instagram</span></a>
+                </div>
+            </div>
+            
+            <div class="availability-status">
+                <div class="status-indicator">
+                    <span class="status-dot active"></span>
+                    <span class="status-text">Available for opportunities</span>
+                </div>
+                <p>Open to internships, freelance projects, and full-time roles starting 2026</p>
+            </div>
+        </div>
+        
+        <!-- Right Side - Contact Form -->
+<div class="contact-form-side">
+    <form id="contactForm" class="contact-form" action="https://formspree.io/f/mgoqzlbb" method="POST">
+        
+        <!-- Important: Yeh fields spam ko rokne mein help karte hain -->
+        <input type="hidden" name="_subject" value="New Portfolio Message from Shivan Mishra Portfolio">
+        <input type="hidden" name="_replyto" value="shivrom.2020@gmail.com">
+        <input type="hidden" name="_from" value="shivrom.2020@gmail.com">
+        
+        <div class="form-row">
+            <div class="form-group">
+                <label><i class="fas fa-user"></i> Full Name <span class="required">*</span></label>
+                <input type="text" id="name" name="name" class="form-control" placeholder="Enter your full name" required>
+                <div class="error-message" id="nameError"></div>
+            </div>
+            
+            <div class="form-group">
+                <label><i class="fas fa-envelope"></i> Email Address <span class="required">*</span></label>
+                <input type="email" id="email" name="email" class="form-control" placeholder="your@email.com" required>
+                <div class="error-message" id="emailError"></div>
+            </div>
+        </div>
+        
+        <div class="form-row">
+            <div class="form-group">
+                <label><i class="fas fa-phone"></i> Phone Number</label>
+                <input type="tel" id="phone" name="phone" class="form-control" placeholder="+91 XXXXX XXXXX">
+                <div class="error-message" id="phoneError"></div>
+            </div>
+            
+            <div class="form-group">
+                <label><i class="fas fa-tag"></i> Subject <span class="required">*</span></label>
+                <select id="subject" name="subject" class="form-control" required>
+                    <option value="" disabled selected>Select a subject</option>
+                    <option value="Project Inquiry">Project Inquiry</option>
+                    <option value="Internship Opportunity">Internship Opportunity</option>
+                    <option value="Collaboration">Collaboration</option>
+                    <option value="Feedback">Feedback</option>
+                    <option value="Other">Other</option>
+                </select>
+                <div class="error-message" id="subjectError"></div>
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <label><i class="fas fa-comment"></i> Message <span class="required">*</span></label>
+            <textarea id="message" name="message" class="form-control" placeholder="Tell me about your project..." rows="5" required></textarea>
+            <div class="error-message" id="messageError"></div>
+        </div>
+        
+        <button type="submit" class="submit-btn" id="submitBtn">
+            <span class="btn-text">Send Message</span>
+            <span class="btn-icon"><i class="fas fa-paper-plane"></i></span>
+        </button>
+        
+        <div id="formStatus" class="form-status"></div>
+    </form>
+</div>
+    </div>
+</div>
+
+<style>
+    .contact-wrapper { width: 100%; }
+    .contact-header { text-align: center; margin-bottom: 50px; }
+    .section-subtitle { font-size: 1rem; color: var(--accent-color); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 10px; }
+    .section-description { font-size: 0.95rem; color: var(--text-secondary); max-width: 600px; margin: 0 auto; }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 40px; }
+    .contact-info-side { display: flex; flex-direction: column; gap: 20px; }
+    .contact-card { display: flex; align-items: flex-start; gap: 18px; background: var(--card-bg); padding: 22px; border-radius: 16px; border: 1px solid var(--border-color); transition: var(--transition); }
+    .contact-card:hover { transform: translateY(-3px); border-color: var(--accent-color); }
+    .contact-icon { width: 50px; height: 50px; min-width: 50px; background: var(--bg-secondary); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; color: var(--accent-color); border: 1px solid var(--border-color); }
+    .contact-detail h4 { font-size: 1rem; margin-bottom: 5px; color: var(--text-primary); }
+    .contact-detail p { margin-bottom: 5px; color: var(--text-secondary); }
+    .contact-detail p a { color: var(--text-secondary); text-decoration: none; transition: var(--transition); }
+    .contact-detail p a:hover { color: var(--accent-color); }
+    .contact-sub { font-size: 0.75rem; color: var(--text-secondary); opacity: 0.7; }
+    .social-connect { background: var(--card-bg); padding: 22px; border-radius: 16px; border: 1px solid var(--border-color); }
+    .social-connect h4 { font-size: 1rem; margin-bottom: 15px; color: var(--text-primary); }
+    .social-links-group { display: flex; flex-wrap: wrap; gap: 12px; }
+    .social-link { display: flex; align-items: center; gap: 10px; padding: 10px 18px; background: var(--bg-secondary); border-radius: 30px; color: var(--text-primary); text-decoration: none; transition: var(--transition); font-size: 0.9rem; border: 1px solid var(--border-color); }
+    .social-link:hover { background: var(--accent-color); color: var(--bg-primary); transform: translateY(-3px); }
+    .availability-status { background: var(--card-bg); padding: 20px; border-radius: 16px; border: 1px solid var(--border-color); }
+    .status-indicator { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+    .status-dot { width: 10px; height: 10px; border-radius: 50%; background: #ff4444; }
+    .status-dot.active { background: #4caf50; animation: pulse 2s infinite; }
+    @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+    .status-text { font-size: 0.9rem; font-weight: 500; color: var(--text-primary); }
+    .availability-status p { font-size: 0.85rem; color: var(--text-secondary); margin: 0; }
+    .contact-form-side { background: var(--card-bg); padding: 35px; border-radius: 20px; border: 1px solid var(--border-color); transition: var(--transition); }
+    .contact-form-side:hover { border-color: var(--accent-color); }
+    .contact-form { display: flex; flex-direction: column; gap: 20px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .form-group { display: flex; flex-direction: column; gap: 8px; }
+    .form-group label { font-size: 0.9rem; font-weight: 500; color: var(--text-primary); }
+    .form-group label i { margin-right: 8px; color: var(--accent-color); }
+    .required { color: #ff4444; }
+    .form-control { background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: 10px; padding: 12px 16px; font-size: 0.9rem; color: var(--text-primary); font-family: inherit; }
+    .form-control:focus { outline: none; border-color: var(--accent-color); }
+    .error-message { font-size: 0.75rem; color: #ff4444; display: none; }
+    .error-message.show { display: block; }
+    .form-control.error { border-color: #ff4444; }
+    .submit-btn { background: var(--accent-color); color: var(--bg-primary); border: none; padding: 14px 28px; border-radius: 40px; font-size: 1rem; font-weight: 600; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 12px; transition: var(--transition); margin-top: 10px; }
+    .submit-btn:hover { transform: translateY(-3px); opacity: 0.9; }
+    .submit-btn:hover .btn-icon { transform: translateX(5px); }
+    .form-status { margin-top: 15px; padding: 12px; border-radius: 10px; font-size: 0.85rem; display: none; }
+    .form-status.success { display: block; background: rgba(76, 175, 80, 0.1); border: 1px solid #4caf50; color: #4caf50; }
+    .form-status.error { display: block; background: rgba(255, 68, 68, 0.1); border: 1px solid #ff4444; color: #ff4444; }
+    .submit-btn.loading { opacity: 0.7; cursor: not-allowed; }
+    .submit-btn.loading .btn-text::after { content: ''; width: 16px; height: 16px; border: 2px solid var(--bg-primary); border-top-color: transparent; border-radius: 50%; display: inline-block; margin-left: 8px; animation: spin 0.8s linear infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    @media (max-width: 992px) { .contact-grid { grid-template-columns: 1fr; gap: 30px; } .contact-info-side { order: 2; } .contact-form-side { order: 1; } }
+    @media (max-width: 768px) { .contact-form-side { padding: 25px; } .form-row { grid-template-columns: 1fr; gap: 15px; } .contact-card { padding: 18px; } .contact-icon { width: 45px; height: 45px; min-width: 45px; font-size: 1.1rem; } .social-link span { display: none; } .social-link { padding: 12px; } }
+    @media (max-width: 576px) { .contact-form-side { padding: 20px; } .contact-card { flex-direction: column; text-align: center; align-items: center; } .contact-detail { text-align: center; } }
+</style>
+
+<script>
+    const form = document.getElementById('contactForm');
+    const submitBtn = document.getElementById('submitBtn');
+    const formStatus = document.getElementById('formStatus');
+    const emailInput = document.getElementById('email');
+    const replytoInput = document.getElementById('replytoEmail');
+    
+    if (emailInput && replytoInput) {
+        emailInput.addEventListener('input', () => replytoInput.value = emailInput.value);
+    }
+    
+    function validateName(name) { return name.trim().length >= 2; }
+    function validateEmail(email) { return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email); }
+    function validatePhone(phone) { if (!phone) return true; return /^[+]?[\d\s-]{10,15}$/.test(phone.trim()); }
+    function validateSubject(subject) { return subject && subject !== ''; }
+    function validateMessage(message) { return message.trim().length >= 10; }
+    
+    function showError(fieldId, message) {
+        const errorDiv = document.getElementById(`${fieldId}Error`);
+        const input = document.getElementById(fieldId);
+        if (errorDiv) { errorDiv.textContent = message; errorDiv.classList.add('show'); }
+        if (input) { input.classList.add('error'); }
+    }
+    
+    function hideError(fieldId) {
+        const errorDiv = document.getElementById(`${fieldId}Error`);
+        const input = document.getElementById(fieldId);
+        if (errorDiv) { errorDiv.classList.remove('show'); errorDiv.textContent = ''; }
+        if (input) { input.classList.remove('error'); }
+    }
+    
+    document.getElementById('name')?.addEventListener('input', () => validateName(document.getElementById('name').value) ? hideError('name') : showError('name', 'Name must be at least 2 characters'));
+    emailInput?.addEventListener('input', () => validateEmail(emailInput.value) ? hideError('email') : showError('email', 'Please enter a valid email address'));
+    document.getElementById('phone')?.addEventListener('input', () => { const p = document.getElementById('phone'); if (validatePhone(p.value)) hideError('phone'); else if (p.value.trim() !== '') showError('phone', 'Please enter a valid phone number'); });
+    document.getElementById('subject')?.addEventListener('change', () => validateSubject(document.getElementById('subject').value) ? hideError('subject') : showError('subject', 'Please select a subject'));
+    document.getElementById('message')?.addEventListener('input', () => validateMessage(document.getElementById('message').value) ? hideError('message') : showError('message', 'Message must be at least 10 characters'));
+    
+    if (form) {
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            let isValid = true;
+            const name = document.getElementById('name')?.value || '';
+            const email = emailInput?.value || '';
+            const phone = document.getElementById('phone')?.value || '';
+            const subject = document.getElementById('subject')?.value || '';
+            const message = document.getElementById('message')?.value || '';
+            
+            if (!validateName(name)) { showError('name', 'Name must be at least 2 characters'); isValid = false; }
+            if (!validateEmail(email)) { showError('email', 'Please enter a valid email address'); isValid = false; }
+            if (phone && !validatePhone(phone)) { showError('phone', 'Please enter a valid phone number'); isValid = false; }
+            if (!validateSubject(subject)) { showError('subject', 'Please select a subject'); isValid = false; }
+            if (!validateMessage(message)) { showError('message', 'Message must be at least 10 characters'); isValid = false; }
+            
+            if (!isValid) return;
+            
+            submitBtn.classList.add('loading');
+            submitBtn.disabled = true;
+            
+            try {
+                const formData = new FormData(form);
+                const response = await fetch(form.action, { method: 'POST', body: formData, headers: { 'Accept': 'application/json' } });
+                
+                if (response.ok) {
+                    formStatus.className = 'form-status success';
+                    formStatus.textContent = 'Thank you! Your message has been sent successfully. I\'ll get back to you within 24 hours.';
+                    form.reset();
+                    ['name', 'email', 'phone', 'subject', 'message'].forEach(f => hideError(f));
+                } else {
+                    throw new Error('Submission failed');
+                }
+            } catch (error) {
+                formStatus.className = 'form-status error';
+                formStatus.textContent = 'Something went wrong. Please try again later or contact me directly via email.';
+            } finally {
+                submitBtn.classList.remove('loading');
+                submitBtn.disabled = false;
+                setTimeout(() => { formStatus.className = 'form-status'; formStatus.textContent = ''; }, 5000);
+            }
+        });
+    }
+</script>

@@ -1,0 +1,100 @@
+{
+  "certificates": [
+    {
+      "id": 1,
+      "name": "Web Development Fundamentals",
+      "issuer": "Coursera",
+      "date": "June 2023",
+      "credentialId": "CRS-WD-2023-001",
+      "description": "Completed comprehensive course covering HTML, CSS, and JavaScript fundamentals. This certificate validates proficiency in front-end web development technologies and responsive design principles.",
+      "image": "assets/images/certificates/cert1.jpg",
+      "verifyLink": "https://coursera.org/verify/example1",
+      "skills": ["HTML5", "CSS3", "JavaScript", "Responsive Design"],
+      "category": "web"
+    },
+    {
+      "id": 2,
+      "name": "Python for Data Science",
+      "issuer": "IBM",
+      "date": "August 2023",
+      "credentialId": "IBM-PDS-2023-002",
+      "description": "Mastered Python programming for data analysis and visualization. This certificate demonstrates expertise in using Python libraries like Pandas, NumPy, and Matplotlib for data manipulation and visualization.",
+      "image": "assets/images/certificates/cert2.jpg",
+      "verifyLink": "https://ibm.com/verify/example2",
+      "skills": ["Python", "Pandas", "NumPy", "Matplotlib", "Data Visualization"],
+      "category": "data-science"
+    },
+    {
+      "id": 3,
+      "name": "Database Management",
+      "issuer": "Oracle",
+      "date": "October 2023",
+      "credentialId": "ORC-DB-2023-003",
+      "description": "Learned SQL fundamentals and database design principles. This certificate validates skills in database normalization, SQL queries, and database administration concepts.",
+      "image": "assets/images/certificates/cert3.jpg",
+      "verifyLink": "https://oracle.com/verify/example3",
+      "skills": ["SQL", "MySQL", "Database Design", "Normalization", "Query Optimization"],
+      "category": "database"
+    },
+    {
+      "id": 4,
+      "name": "JavaScript Algorithms",
+      "issuer": "freeCodeCamp",
+      "date": "December 2023",
+      "credentialId": "FCC-JS-2023-004",
+      "description": "Completed 300+ hours of JavaScript algorithm challenges. This certificate demonstrates proficiency in JavaScript programming, data structures, and algorithm implementation.",
+      "image": "assets/images/certificates/cert4.jpg",
+      "verifyLink": "https://freecodecamp.org/verify/example4",
+      "skills": ["JavaScript", "Algorithms", "Data Structures", "Problem Solving"],
+      "category": "programming"
+    },
+    {
+      "id": 5,
+      "name": "React Development",
+      "issuer": "Meta",
+      "date": "February 2024",
+      "credentialId": "META-RCT-2024-005",
+      "description": "Built interactive UIs with React and modern frontend tools. This certificate validates skills in React components, state management, hooks, and modern frontend development practices.",
+      "image": "assets/images/certificates/cert5.jpg",
+      "verifyLink": "https://meta.com/verify/example5",
+      "skills": ["React", "Hooks", "Components", "State Management", "Frontend"],
+      "category": "frontend"
+    },
+    {
+      "id": 6,
+      "name": "Cloud Computing Basics",
+      "issuer": "AWS",
+      "date": "April 2024",
+      "credentialId": "AWS-CC-2024-006",
+      "description": "Introduction to cloud services and deployment strategies. This certificate demonstrates understanding of cloud computing concepts, AWS services, and cloud deployment methodologies.",
+      "image": "assets/images/certificates/cert6.jpg",
+      "verifyLink": "https://aws.amazon.com/verify/example6",
+      "skills": ["Cloud Computing", "AWS", "Deployment", "Cloud Services"],
+      "category": "cloud"
+    },
+    {
+      "id": 7,
+      "name": "GenAI Academy Completion",
+      "issuer": "Hack2Skill",
+      "date": "January 2025",
+      "credentialId": "H2S-GENAI-2025-007",
+      "description": "Completed the GenAI Academy — the first phase of the GenAI Exchange Hackathon — gaining hands-on experience with generative AI concepts, tools, and real-world applications.",
+      "image": "assets/images/certificates/cert7.jpg",
+      "verifyLink": "https://hack2skill.com/verify/example7",
+      "skills": ["Generative AI", "LLMs", "Prompt Engineering", "AI Tools"],
+      "category": "ai"
+    },
+    {
+      "id": 8,
+      "name": "BCG Data Science Simulation",
+      "issuer": "BCG / Forage",
+      "date": "March 2025",
+      "credentialId": "BCG-DS-2025-008",
+      "description": "Completed a virtual job simulation focused on practical data science tasks, including data cleaning, exploratory analysis, and predictive modeling to solve real business problems.",
+      "image": "assets/images/certificates/cert8.jpg",
+      "verifyLink": "https://forage.com/verify/example8",
+      "skills": ["Data Cleaning", "EDA", "Predictive Modeling", "Business Analytics"],
+      "category": "data-science"
+    }
+  ]
+}

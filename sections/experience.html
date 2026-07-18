@@ -1,0 +1,334 @@
+<!-- sections/experience.html -->
+<!-- Work Experience Section - No Leadership/Volunteering -->
+
+<div class="experience-section">
+
+    <!-- Professional Experience -->
+    <div class="experience-category">
+        <h3 class="category-title">
+            <i class="fas fa-briefcase"></i>
+            Work Experience
+        </h3>
+
+        <div class="timeline">
+            <!-- Experience 1 - AIML Intern -->
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">2025 - Present</div>
+                <div class="timeline-content">
+                    <h4>AIML Intern</h4>
+                    <h5>TechCorp Inc.</h5>
+                    <p>Working with real-world datasets, performing data analysis, building machine learning models, and
+                        implementing AI solutions for business problems.</p>
+                    <div class="timeline-tags">
+                        <span>Python</span>
+                        <span>Machine Learning</span>
+                        <span>Data Analysis</span>
+                        <span>Pandas</span>
+                        <span>NumPy</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Experience 2 - Web Designer Intern -->
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">2025 - Present</div>
+                <div class="timeline-content">
+                    <h4>Web Designer Intern</h4>
+                    <h5>Digital Solutions</h5>
+                    <p>Developed and maintained client websites using MERN stack, implemented responsive designs, and
+                        delivered custom web solutions.</p>
+                    <div class="timeline-tags">
+                        <span>React</span>
+                        <span>Node.js</span>
+                        <span>MongoDB</span>
+                        <span>Express</span>
+                        <span>HTML/CSS</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Experience 3 - Labmentrix Intern -->
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">2024 - Present</div>
+                <div class="timeline-content">
+                    <h4>Unpaid Intern</h4>
+                    <h5>Labmentrix</h5>
+                    <p>Contributing to live projects, collaborating with the development team, and gaining hands-on
+                        experience in the tech industry. Working on real-world applications and implementing modern web
+                        technologies.</p>
+                    <div class="timeline-tags">
+                        <span>JavaScript</span>
+                        <span>React</span>
+                        <span>Git</span>
+                        <span>Agile Methodology</span>
+                        <span>Team Collaboration</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Current Role Card (Labmentrix Highlight) -->
+    <div class="current-role">
+        <div class="current-role-icon">
+            <i class="fas fa-chart-line"></i>
+        </div>
+        <div class="current-role-content">
+            <h4>Currently at Labmentrix</h4>
+            <p>Gaining real-world experience through paid internship, contributing to live projects, and expanding
+                skills in the tech industry.</p>
+            <div class="role-highlights">
+                <span><i class="fas fa-check-circle"></i> Live Project Contribution</span>
+                <span><i class="fas fa-check-circle"></i> Team Collaboration</span>
+                <span><i class="fas fa-check-circle"></i> Agile Development</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    /* Experience Section Styles */
+    .experience-section {
+        width: 100%;
+    }
+
+    .experience-category {
+        background: var(--card-bg);
+        border-radius: 20px;
+        padding: 30px;
+        border: 1px solid var(--border-color);
+        transition: var(--transition);
+        margin-bottom: 30px;
+    }
+
+    .experience-category:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow);
+    }
+
+    .category-title {
+        font-size: 1.4rem;
+        margin-bottom: 30px;
+        color: var(--text-primary);
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding-bottom: 15px;
+        border-bottom: 2px solid var(--border-color);
+    }
+
+    .category-title i {
+        color: var(--accent-color);
+        font-size: 1.4rem;
+    }
+
+    /* Timeline Styles */
+    .timeline {
+        position: relative;
+        padding-left: 30px;
+    }
+
+    .timeline::before {
+        content: '';
+        position: absolute;
+        left: 8px;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background: var(--border-color);
+    }
+
+    .timeline-item {
+        position: relative;
+        margin-bottom: 40px;
+    }
+
+    .timeline-item:last-child {
+        margin-bottom: 0;
+    }
+
+    .timeline-dot {
+        position: absolute;
+        left: -26px;
+        top: 5px;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: var(--accent-color);
+        border: 2px solid var(--bg-primary);
+    }
+
+    .timeline-date {
+        font-size: 0.8rem;
+        color: var(--accent-color);
+        margin-bottom: 8px;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+    }
+
+    .timeline-content h4 {
+        font-size: 1.2rem;
+        margin-bottom: 5px;
+        color: var(--text-primary);
+    }
+
+    .timeline-content h5 {
+        font-size: 0.9rem;
+        color: var(--text-secondary);
+        margin-bottom: 10px;
+        font-weight: 500;
+    }
+
+    .timeline-content p {
+        font-size: 0.9rem;
+        color: var(--text-secondary);
+        margin-bottom: 12px;
+        line-height: 1.6;
+    }
+
+    .timeline-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .timeline-tags span {
+        background: rgba(255, 255, 255, 0.08);
+        color: var(--text-secondary);
+        padding: 4px 12px;
+        border-radius: 20px;
+        font-size: 0.7rem;
+        font-weight: 500;
+        transition: var(--transition);
+    }
+
+    .timeline-tags span:hover {
+        background: var(--accent-color);
+        color: var(--bg-primary);
+    }
+
+    /* Current Role Card */
+    .current-role {
+        display: flex;
+        gap: 20px;
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), transparent);
+        border-radius: 16px;
+        padding: 25px;
+        border: 1px solid var(--border-color);
+        transition: var(--transition);
+    }
+
+    .current-role:hover {
+        transform: translateY(-3px);
+        border-color: var(--accent-color);
+    }
+
+    .current-role-icon {
+        font-size: 2.5rem;
+        color: var(--accent-color);
+    }
+
+    .current-role-content {
+        flex: 1;
+    }
+
+    .current-role-content h4 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+        color: var(--text-primary);
+    }
+
+    .current-role-content p {
+        font-size: 0.9rem;
+        color: var(--text-secondary);
+        margin-bottom: 15px;
+        line-height: 1.6;
+    }
+
+    .role-highlights {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .role-highlights span {
+        font-size: 0.85rem;
+        color: var(--text-secondary);
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .role-highlights span i {
+        color: var(--accent-color);
+        font-size: 0.8rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .experience-category {
+            padding: 20px;
+        }
+
+        .category-title {
+            font-size: 1.2rem;
+        }
+
+        .timeline {
+            padding-left: 20px;
+        }
+
+        .timeline-dot {
+            left: -21px;
+            width: 10px;
+            height: 10px;
+        }
+
+        .timeline-content h4 {
+            font-size: 1rem;
+        }
+
+        .timeline-content h5 {
+            font-size: 0.8rem;
+        }
+
+        .timeline-content p {
+            font-size: 0.85rem;
+        }
+
+        .current-role {
+            flex-direction: column;
+            text-align: center;
+            gap: 15px;
+        }
+
+        .role-highlights {
+            justify-content: center;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .experience-category {
+            padding: 15px;
+        }
+
+        .timeline-tags span {
+            padding: 3px 10px;
+            font-size: 0.65rem;
+        }
+
+        .role-highlights {
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .role-highlights span {
+            font-size: 0.8rem;
+        }
+    }
+
+</style>

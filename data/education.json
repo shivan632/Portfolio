@@ -1,0 +1,88 @@
+{
+  "education": [
+    {
+      "id": 1,
+      "degree": "Bachelor in Computer Applications (BCA)",
+      "institution": "United University",
+      "location": "Prayagraj, India",
+      "startDate": "2023",
+      "endDate": "2026",
+      "current": true,
+      "cgpa": 8.71,
+      "specialization": "IBM Technologies",
+      "description": "Specialized in IBM technologies and Web Development. Coursework includes Data Structures & Algorithms, Design & Analysis of Algorithms, Computer Networking, Operating Systems, and Digital Logic & Design.",
+      "courses": [
+        "Data Structures & Algorithms (DSA)",
+        "Design & Analysis of Algorithms (DAA)",
+        "Computer Networking",
+        "Operating Systems",
+        "Digital Logic & Design",
+        "Web Development",
+        "Database Management Systems"
+      ]
+    },
+    {
+      "id": 2,
+      "degree": "Higher Secondary (12th)",
+      "institution": "A.P.S New Cantt",
+      "location": "Prayagraj, India",
+      "startDate": "2022",
+      "endDate": "2023",
+      "current": false,
+      "percentage": 62,
+      "stream": "Science",
+      "description": "Specialized in Physics and Mathematics. Built strong foundation in analytical thinking and problem-solving skills.",
+      "courses": [
+        "Physics",
+        "Chemistry",
+        "Mathematics",
+        "Computer Science"
+      ]
+    }
+  ],
+  "certifications_summary": [
+    {
+      "name": "Python for Data Science",
+      "issuer": "IBM",
+      "date": "August 2023"
+    },
+    {
+      "name": "Database Management",
+      "issuer": "Oracle",
+      "date": "October 2023"
+    },
+    {
+      "name": "JavaScript Algorithms",
+      "issuer": "freeCodeCamp",
+      "date": "December 2023"
+    },
+    {
+      "name": "React Development",
+      "issuer": "Meta",
+      "date": "February 2024"
+    },
+    {
+      "name": "Cloud Computing Basics",
+      "issuer": "AWS",
+      "date": "April 2024"
+    }
+  ],
+  "achievements": [
+    {
+      "title": "Academic Excellence",
+      "description": "Consistently maintained CGPA above 8.5 throughout BCA program"
+    },
+    {
+      "title": "Project Showcase",
+      "description": "Successfully delivered 7+ live projects including full-stack and ML applications"
+    },
+    {
+      "title": "Group Project Lead",
+      "description": "Led University Selector project team - a platform for helping students find best universities"
+    },
+    {
+      "title": "Continuous Learning",
+      "description": "Completed 6+ professional certifications in emerging technologies"
+    }
+  ]
+}

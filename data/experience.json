@@ -1,0 +1,82 @@
+{
+  "experiences": [
+    {
+      "id": 1,
+      "title": "AIML Intern",
+      "company": "TechCorp Inc.",
+      "location": "Remote",
+      "startDate": "2025-01",
+      "endDate": "Present",
+      "current": true,
+      "description": "Working with real-world datasets, performing data analysis, building machine learning models, and implementing AI solutions for business problems.",
+      "responsibilities": [
+        "Developing and training machine learning models for predictive analytics",
+        "Performing exploratory data analysis on large datasets",
+        "Collaborating with data science team on model deployment",
+        "Implementing data preprocessing pipelines"
+      ],
+      "technologies": ["Python", "Machine Learning", "Data Analysis", "Pandas", "NumPy", "Scikit-learn"],
+      "type": "internship"
+    },
+    {
+      "id": 2,
+      "title": "Web Designer Intern",
+      "company": "Digital Solutions",
+      "location": "Prayagraj, India",
+      "startDate": "2025-01",
+      "endDate": "Present",
+      "current": true,
+      "description": "Developed and maintained client websites using MERN stack, implemented responsive designs, and delivered custom web solutions.",
+      "responsibilities": [
+        "Building responsive web applications using React and Node.js",
+        "Integrating MongoDB databases for data persistence",
+        "Collaborating with designers to implement UI/UX designs",
+        "Optimizing website performance and SEO"
+      ],
+      "technologies": ["React", "Node.js", "MongoDB", "Express", "HTML5", "CSS3", "JavaScript"],
+      "type": "internship"
+    },
+    {
+      "id": 3,
+      "title": "Paid Intern",
+      "company": "Labmentrix",
+      "location": "Prayagraj, India",
+      "startDate": "2024-08",
+      "endDate": "Present",
+      "current": true,
+      "description": "Contributing to live projects, collaborating with the development team, and gaining hands-on experience in the tech industry. Working on real-world applications and implementing modern web technologies.",
+      "responsibilities": [
+        "Contributing to live production projects",
+        "Participating in daily stand-ups and sprint planning",
+        "Writing clean, maintainable code following best practices",
+        "Debugging and fixing issues in existing codebase"
+      ],
+      "technologies": ["JavaScript", "React", "Node.js", "Git", "Agile Methodology"],
+      "type": "internship"
+    }
+  ],
+  "volunteering": [
+    {
+      "id": 1,
+      "title": "Tech Club Member",
+      "organization": "United University",
+      "description": "Active participant in university tech club, organizing coding events and workshops.",
+      "responsibilities": [
+        "Organizing coding competitions and hackathons",
+        "Conducting workshops on web development",
+        "Mentoring junior students in programming"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Peer Tutor",
+      "organization": "United University",
+      "description": "Mentoring junior students in programming fundamentals and web development.",
+      "responsibilities": [
+        "Providing one-on-one tutoring sessions",
+        "Creating learning materials and exercises",
+        "Helping students debug their code"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "Food Ordering Platform",
+      "description": "A full-featured online food ordering platform with menu listings, cart functionality, and secure checkout.",
+      "image": "assets/images/projects/project1.png",
+      "tags": ["HTML5", "CSS3", "JavaScript"],
+      "liveLink": "https://project-food-website.vercel.app/",
+      "codeLink": "https://github.com/shivan632/Project-Food-Website.git",
+      "featured": true,
+      "category": "web",
+      "date": "2024"
+    },
+    {
+      "id": 2,
+      "title": "University Selector",
+      "description": "A group project that helps students discover the best universities based on their academic performance and personal preferences.",
+      "image": "assets/images/projects/project2.png",
+      "tags": ["HTML5", "CSS3", "JavaScript", "MySQL", "Express.js"],
+      "liveLink": "https://university-selector.vercel.app/",
+      "codeLink": "https://github.com/shivan632/University-Selector.git",
+      "featured": true,
+      "category": "fullstack",
+      "date": "2024"
+    },
+    {
+      "id": 3,
+      "title": "Adventure Explorer",
+      "description": "A travel-themed website showcasing a platform dedicated to adventure travel, exploration, and inspiring journeys around the world.",
+      "image": "assets/images/projects/project3.png",
+      "tags": ["HTML5", "CSS3", "JavaScript"],
+      "liveLink": "https://advanture-nu.vercel.app/",
+      "codeLink": "https://github.com/shivan632/Advanture.git",
+      "featured": true,
+      "category": "frontend",
+      "date": "2024"
+    },
+    {
+      "id": 4,
+      "title": "AniFlix",
+      "description": "Anime streaming platform delivering bite-sized anime clips and summaries from a wide range of series, featuring interactive quiz games.",
+      "image": "assets/images/projects/project4.png",
+      "tags": ["HTML5", "CSS3", "JavaScript"],
+      "liveLink": "https://ani-flix-two.vercel.app/",
+      "codeLink": "https://github.com/shivan632/AniFlix.git",
+      "featured": true,
+      "category": "frontend",
+      "date": "2024"
+    },
+    {
+      "id": 5,
+      "title": "QuickDoc AI",
+      "description": "Online telehealth platform connecting users with certified doctors via secure video consultations, personalized medical advice, and online prescriptions.",
+      "image": "assets/images/projects/project5.png",
+      "tags": ["HTML5", "CSS3", "JavaScript"],
+      "liveLink": "https://quick-doc-ai-rho.vercel.app/",
+      "codeLink": "https://github.com/shivan632/QuickDocAI.git",
+      "featured": true,
+      "category": "frontend",
+      "date": "2024"
+    },
+    {
+      "id": 6,
+      "title": "Brain Tumor Detection",
+      "description": "Deep learning-based medical imaging project that classifies brain MRI scans into different categories to assist in early tumor diagnosis.",
+      "image": "assets/images/projects/Project6.jpeg",
+      "tags": ["Python", "Machine Learning", "Deep Learning", "TensorFlow"],
+      "liveLink": null,
+      "codeLink": "https://github.com/shivan632/Brain-Tumor-MRI-Classifierr",
+      "featured": true,
+      "category": "ml",
+      "date": "2024"
+    },
+    {
+      "id": 7,
+      "title": "Fish Classification",
+      "description": "Computer vision deep learning project that identifies and classifies different fish species from underwater images.",
+      "image": "assets/images/projects/Project7.png",
+      "tags": ["Python", "Machine Learning", "Deep Learning", "CNN"],
+      "liveLink": null,
+      "codeLink": "https://github.com/shivan632/Fish-Classification.git",
+      "featured": true,
+      "category": "ml",
+      "date": "2024"
+    }
+  ]
+}
