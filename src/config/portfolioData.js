@@ -8,7 +8,6 @@ import foodImg from "../assets/project_img/food.png";
 import aniflixImg from "../assets/project_img/aniflix.png";
 import sentiment from "../assets/project_img/sentiment.png";
 
-
 import nodeCert from "../assets/certificate/node.jpg";
 import dsCert from "../assets/certificate/data-science.png";
 import pythonCert from "../assets/certificate/p-python.png";
