@@ -94,6 +94,7 @@ export const portfolioData = {
       tech: ["React", "Node.js", "Express", "SupaBase", "Tailwind CSS", "Bootstrap"],
       github: "https://github.com/shivan632/flashnotes-grp-pjt",
       vercel: "https://flashnotes-grp-pjt-1t3z.vercel.app/",
+      analysis: "https://flashnotesgrppjt-ibzbmgjvu58n95fjpsvwao.streamlit.app/",
       image: flashnotesImg
     },
     {

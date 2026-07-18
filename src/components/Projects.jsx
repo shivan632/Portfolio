@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, Card, Modal } from 'react-bootstrap';
-import { ExternalLink, Github, Eye, X } from 'lucide-react';
+import { ExternalLink, Github, Eye, X, BarChart2 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { portfolioData } from '../config/portfolioData';
 import ProjectsBackground from './ProjectsBackground';
@@ -164,6 +164,17 @@ const Projects = ({ darkMode }) => {
                                 <ExternalLink size={18} />
                               </a>
                             )}
+                            {project.analysis && (
+                              <a
+                                href={project.analysis}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-slate-400 hover:text-brand-glow dark:text-slate-500 dark:hover:text-brand-glow transition-colors"
+                                aria-label="Data Analysis"
+                              >
+                                <BarChart2 size={18} />
+                              </a>
+                            )}
                           </div>
                         </div>
                       </div>
@@ -255,6 +266,18 @@ const Projects = ({ darkMode }) => {
                           >
                             <ExternalLink size={16} />
                             <span>Live Demo</span>
+                          </a>
+                        )}
+
+                        {selectedProject.analysis && (
+                          <a
+                            href={selectedProject.analysis}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="btn d-inline-flex align-items-center gap-2 px-4 py-2.5 rounded-full font-heading font-bold hover:scale-105 active:scale-95 transition-all text-sm text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-900 no-underline"
+                          >
+                            <BarChart2 size={16} />
+                            <span>Data Analysis</span>
                           </a>
                         )}
 
