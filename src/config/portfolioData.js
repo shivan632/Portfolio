@@ -7,7 +7,7 @@ import adventureImg from "../assets/project_img/adventure.png";
 import foodImg from "../assets/project_img/food.png";
 import aniflixImg from "../assets/project_img/aniflix.png";
 import sentiment from "../assets/project_img/sentiment.png";
-
+import movie from "../assets/project_img/movie.png";
 import nodeCert from "../assets/certificate/node.jpg";
 import dsCert from "../assets/certificate/data-science.png";
 import pythonCert from "../assets/certificate/p-python.png";
@@ -111,9 +111,9 @@ export const portfolioData = {
     },
     {
       id: 3,
-      title: "Brain Tumar Detection",
-      shortDescription: "Brain Tumar Detection using Deep Learning",
-      longDescription: "Brain Tumar Detection using Deep Learning. It is built using Streamlit, TensorFlow & Keras and Python.",
+      title: "Brain Tumor Detection",
+      shortDescription: "A deep learning application for detecting brain tumors from MRI scans.",
+      longDescription: "Brain Tumor Detection is an AI-powered medical imaging application that analyzes MRI brain scans to detect the presence of brain tumors. Built using TensorFlow, Keras, and Convolutional Neural Networks (CNNs), the model delivers accurate image classification through an interactive Streamlit interface, enabling users to upload MRI images and receive real-time predictions.",
       category: "Data Science",
       tech: ["Python", "TensorFlow & Keras", "Streamlit", "CNN"],
       github: "https://github.com/shivan632/Brain-Tumor-MRI-Classifierr",
@@ -122,8 +122,8 @@ export const portfolioData = {
     {
       id: 4,
       title: "Fish Classification",
-      shortDescription: "A Fish Classification using Deep Learning",
-      longDescription: "A Fish Classification using Deep Learning pridect a fish Class by taking it's image as input. It is built using Keras, TensorFlow and Python.",
+      shortDescription: "A deep learning model for automated fish species classification.",
+      longDescription: "Fish Classification is a deep learning application that identifies fish species from uploaded images using Convolutional Neural Networks (CNNs). The model is trained with TensorFlow and Keras to achieve accurate image classification, while the Streamlit interface enables users to upload images and receive instant predictions through an intuitive web application.",
       category: "Data Science",
       tech: ["Python", "TensorFlow & Keras", "Streamlit", "CNN & ANN"],
       github: "https://github.com/shivan632/Fish-Classification",
@@ -153,6 +153,17 @@ export const portfolioData = {
     },
     {
       id: 7,
+      title: "Rotten Tomatoes Sentiment Intelligence",
+      shortDescription: "A data science application that analyzes Rotten Tomatoes movie reviews using sentiment analysis and interactive visualizations.",
+      longDescription: "Rotten Tomatoes Sentiment Intelligence is a data science project that performs sentiment analysis on movie reviews to classify audience opinions as positive, negative, or neutral. The application includes interactive dashboards, insightful visualizations, and text analysis techniques to help users understand review trends, audience sentiment, and movie performance. Built with Python and Streamlit, it demonstrates practical applications of Natural Language Processing (NLP), data visualization, and machine learning for real-world review analytics.",
+      category: "Data Science",
+      tech: ["Python", "Pandas", "NumPy", "NLTK", "Scikit-learn", "Streamlit", "Matplotlib", "Seaborn"],
+      github: "https://github.com/shivan632/Movie-Analysis.git",
+      vercel: "https://movie-analysis-8tt6ebyfrafughk6hwqzhm.streamlit.app/",
+      image: movie
+    },
+    {
+      id: 8,
       title: "Food Ordering Platform",
       shortDescription: "A food ordering platform where users can order food from different restaurants.",
       longDescription: "A food ordering platform where different types of food are available and users can order them. A full-featured online food ordering platform with menu listings, cart functionality, and secure checkout.",
@@ -163,10 +174,10 @@ export const portfolioData = {
       image: foodImg
     },
     {
-      id: 8,
+      id: 9,
       title: "Sentiment Analysis System",
-      shortDescription: "Sentiment Analysis",
-      longDescription: "Sentiment Analysis on Social Media is an AI-powered web application that analyzes the sentiment of user-provided social media text and classifies it as Positive, Negative, or Neutral. The application uses Natural Language Processing (NLP) and a trained machine learning model to preprocess text, extract meaningful features, and generate accurate sentiment predictions.",
+      shortDescription: "An AI-powered application for analyzing sentiment from social media text.",
+      longDescription: "Sentiment Analysis System is a machine learning application that processes social media text and classifies it into Positive, Negative, or Neutral sentiment. Using Natural Language Processing (NLP), the system cleans and transforms text data before applying a trained classification model to generate accurate predictions. Built with Python and Streamlit, it provides an interactive interface for real-time sentiment analysis and text visualization.",
       category: "Data Science",
       tech: ["Python", "NumPy", "Pandas", "Streamlit", "NLP"],
       github: "https://github.com/shivan632/Sentiment-Analyses-on-Social-Media.git",
@@ -174,8 +185,7 @@ export const portfolioData = {
       image: sentiment
     },
     {
-      id: 9,
-
+      id: 10,
       title: "AniFlix (OTT Platform)",
       shortDescription: "A platform where users can watch anime, series, and other shows.",
       longDescription: "A OTT platform where users can watch anime, series, and other shows. A full-featured online OTT platform with  listings, cart functionality, and secure checkout.",
