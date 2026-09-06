@@ -8,6 +8,9 @@ import foodImg from "../assets/project_img/food.png";
 import aniflixImg from "../assets/project_img/aniflix.png";
 import sentiment from "../assets/project_img/sentiment.png";
 import movie from "../assets/project_img/movie.png";
+import coalMineImg from "../assets/project_img/coalmine.png";
+import titanticImg from "../assets/project_img/titanic.png";
+
 import nodeCert from "../assets/certificate/node.jpg";
 import dsCert from "../assets/certificate/data-science.png";
 import pythonCert from "../assets/certificate/p-python.png";
@@ -15,6 +18,7 @@ import pdsCert from "../assets/certificate/p-data-science.png";
 import aiCert from "../assets/certificate/ai.png";
 import mlCert from "../assets/certificate/ml.png";
 import devfestCert from "../assets/certificate/devfest.png";
+import cloudCert from "../assets/certificate/cloud-computing.png";
 
 export const portfolioData = {
   personalInfo: {
@@ -159,7 +163,7 @@ export const portfolioData = {
       category: "Data Science",
       tech: ["Python", "Pandas", "NumPy", "NLTK", "Scikit-learn", "Streamlit", "Matplotlib", "Seaborn"],
       github: "https://github.com/shivan632/Movie-Analysis.git",
-      vercel: "https://movie-analysis-8tt6ebyfrafughk6hwqzhm.streamlit.app/",
+      analysis: "https://movie-analysis-8tt6ebyfrafughk6hwqzhm.streamlit.app/",
       image: movie
     },
     {
@@ -175,6 +179,17 @@ export const portfolioData = {
     },
     {
       id: 9,
+      title: "CoalGuard AI",
+      shortDescription: "A mission-critical underground coal mine safety command center with real-time telemetry, edge AI PPE compliance, and DGMS incident management.",
+      longDescription: "CoalGuard AI is a full-stack underground coal mine safety platform featuring a real-time 3D digital twin command center. It streams multi-zone environmental telemetry (CH4, CO, O2, temperature, humidity) via high-frequency WebSocket packets at 1.2s intervals, runs edge AI computer vision for PPE compliance scanning with automated turnstile barrier control, and manages DGMS statutory incident logging with supervisor sign-off workflows. Built on a Supabase PostgreSQL backend with an in-memory resilient cache fallback, the system supports simulation scenario injection, historical time-series analytics, and bi-directional frontend streaming — all designed for zero-downtime operation in hazardous mining environments.",
+      category: "Fullstack",
+      tech: ["React", "Vite", "Zustand", "Node.js", "Express", "TypeScript", "Supabase", "PostgreSQL", "WebSocket", "Tailwind CSS"],
+      github: "https://github.com/shivan632/Coal-Mine.git",
+      vercel: "https://coal-mine-eta.vercel.app/",
+      image: coalMineImg
+    },
+    {
+      id: 10,
       title: "Sentiment Analysis System",
       shortDescription: "An AI-powered application for analyzing sentiment from social media text.",
       longDescription: "Sentiment Analysis System is a machine learning application that processes social media text and classifies it into Positive, Negative, or Neutral sentiment. Using Natural Language Processing (NLP), the system cleans and transforms text data before applying a trained classification model to generate accurate predictions. Built with Python and Streamlit, it provides an interactive interface for real-time sentiment analysis and text visualization.",
@@ -185,7 +200,7 @@ export const portfolioData = {
       image: sentiment
     },
     {
-      id: 10,
+      id: 11,
       title: "AniFlix (OTT Platform)",
       shortDescription: "A platform where users can watch anime, series, and other shows.",
       longDescription: "A OTT platform where users can watch anime, series, and other shows. A full-featured online OTT platform with  listings, cart functionality, and secure checkout.",
@@ -194,6 +209,17 @@ export const portfolioData = {
       github: "https://github.com/shivan632/AniFlix",
       vercel: "https://ani-flix-two.vercel.app/",
       image: aniflixImg
+    },
+    {
+      id: 12,
+      title: "Titanic Survival Prediction",
+      shortDescription: "An interactive machine learning web app that predicts whether a passenger would survive the Titanic disaster based on key passenger details such as age, gender, passenger class, fare, and family information.",
+      longDescription: "Titanic Survival Prediction is an interactive machine learning application built to demonstrate how historical passenger data can be used to predict survival outcomes. Users can enter passenger-related information such as gender, age, passenger class, fare, and family details, and the application generates a survival prediction. The project provides a simple and user-friendly interface for exploring machine learning classification and understanding the factors that influenced survival during the Titanic disaster.",
+      category: "Data Science",
+      tech: ["Python", "Streamlit", "Pandas", "NumPy", "Scikit-learn", "Machine Learning"],
+      github: "https://github.com/shivan632/Titanic-Survival.git",
+      analysis: "https://titanic-survival-takme7chymxfwh9ur4uhes.streamlit.app/",
+      image: titanticImg
     }
   ],
 
@@ -261,6 +287,14 @@ export const portfolioData = {
       date: "November 2025",
       credentialUrl: "https://certificate.givemycertificate.com/c/e1032d34-985b-4bf4-945d-7b31807496f1",
       image: devfestCert
+    },
+    {
+      id: 9,
+      title: "Cloud Computing",
+      issuer: "UnStop",
+      date: "September 2026",
+      credentialUrl: "https://unstop.com/certificate-preview/74442913-2ee7-470b-92c0-253993effeab",
+      image: cloudCert
     }
   ],
 
